@@ -4,11 +4,20 @@ Bloody Roar 4|https://archive.org/download/ps2chd/Bloody%20Roar%204%20.chd
 Capcom vs. SNK 2 - Mark of the Millennium 2001|https://archive.org/download/ps2chd/Capcom%20vs.%20SNK%202%20-%20Mark%20of%20the%20Millennium%202001%20.chd
 Castlevania - Curse of Darkness|https://archive.org/download/ps2chd/Castlevania%20-%20Curse%20of%20Darkness%20.chd
 Castlevania - Lament of Innocence|https://archive.org/download/ps2chd/Castlevania%20-%20Lament%20of%20Innocence%20.chd
+Chaos Legion|https://archive.org/download/ps2chd/Chaos%20Legion.chd
 DOA 2 Hardcore|https://archive.org/download/ps2chd/DOA2%20-%20Hardcore.chd
 Devil May Cry|https://archive.org/download/ps2chd/Devil%20May%20Cry.chd
 Devil May Cry 2 cd1|https://archive.org/download/ps2chd/Devil%20May%20Cry%202%20%28Disc%201%29.chd
 Devil May Cry 2 cd2|https://archive.org/download/ps2chd/Devil%20May%20Cry%202%20%28Disc%202%29.chd
 Devil May Cry 3|https://archive.org/download/ps2chd/Devil%20May%20Cry%203%20-%20Dante%27s%20Awakening%20%28Special%20Edition%29.chd
+Fatal Frame|https://archive.org/download/ps2chd/Fatal%20Frame%20.chd
+Fatal Frame II Crimson Butterfly|https://archive.org/download/ps2chd/Fatal%20Frame%20II%20-%20Crimson%20Butterfly%20.chd
+Fatal Frame III The Tormented|https://archive.org/download/ps2chd/Fatal%20Frame%20III%20-%20The%20Tormented%20.chd
+Final Fantasy X|https://archive.org/download/ps2chd/Final%20Fantasy%20X%20.chd
+Final Fantasy X-2|https://archive.org/download/ps2chd/Final%20Fantasy%20X-2%20.chd
+Metal Gear Solid Sons Of Liberty|https://archive.org/download/ps2chd/Metal%20Gear%20Solid%202%20-%20Substance%20.chd
+Metal Gear Solid Snake Eater|https://archive.org/download/ps2chd/Metal%20Gear%20Solid%203%20-%20Subsistence%20%28Disc%201%20-%20Subsistence%20Disc%29.chd
+Haunting Ground|https://archive.org/download/ps2chd/Haunting%20Ground.chd
 Onimusha Dawn Of Dreams cd1|https://archive.org/download/ps2chd/Onimusha%20-%20Dawn%20of%20Dreams%20%28Disc%201%29.chd
 Onimusha Dawn Of Dreams cd2|https://archive.org/download/ps2chd/Onimusha%20-%20Dawn%20of%20Dreams%20%28Disc%202%29.chd
 Onimusha Blade Warriors|https://archive.org/download/ps2chd/Onimusha%20-%20Blade%20Warriors%20.chd
@@ -27,3 +36,4 @@ Rumble Roses|https://archive.org/download/ps2chd/Rumble%20Roses%20.chd
 Rygar - The Legendary Adventurehttps://archive.org/download/ps2chd/Rygar%20-%20The%20Legendary%20Adventure%20.chd
 Saint Seiya - The Sanctuary (USA)|https://archive.org/download/ps2chd/Saint%20Seiya%20-%20The%20Sanctuary%20%28Dublado%29%20%28USA%29.cso
 Saint Seiya - The Hades (USA)|https://archive.org/download/ps2chd/Saint%20Seiya%20-%20The%20Hades%20%28Dublado%29%20%28USA%29.cso
+Shadow Of The Colosus|https://archive.org/download/ps2chd/Shadow%20of%20the%20Colossus.chd
