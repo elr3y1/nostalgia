@@ -33,6 +33,7 @@ Gyruss|https://archive.org/download/famicomnes-games/Gyruss.zip
 Star Wars|https://archive.org/download/famicomnes-games/Star.Wars%28Namco%29%28J%29.zip
 Star Wars Victor|https://archive.org/download/famicomnes-games/Star.Wars%28Victor%29%28J%29.zip
 Street Fighter 2010|https://archive.org/download/famicomnes-games/Street.Fighter2010%28J%29.zip
+Star Wars Empire Strikes Back|https://archive.org/download/famicomnes-games/Empire.Strikes.Back.The%28J%29.zip
 Strider|https://archive.org/download/famicomnes-games/STRIDER.zip
 Super Mario Brothers 2|https://archive.org/download/famicomnes-games/Super.Mario.Bros.2.zip
 Super Mario Brothers 3|https://archive.org/download/famicomnes-games/Super.Mario.Bros3%28J%29.zip
