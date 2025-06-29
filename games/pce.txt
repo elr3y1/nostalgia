@@ -1,7 +1,23 @@
 1941 Strike Counter|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/1941%20-%20Counter%20Attack%20%28JP%29.pce
 Ace Battle|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/Battle%20Ace%20%28JP%29.pce
+Batman|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FBatman%20%28Japan%29.pce
+Bloody Wolf|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FBloody%20Wolf%20%28USA%29.pce
 Daimakaimura|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/Daimakaimura%20%28JP%29.pce
 Darius Alpha|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/Darius%20Alpha%20%28JP%29.pce
 Darius Plus|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/Darius%20Plus%20%28JP%29.pce
+Darkwing Duck|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FDarkwing%20Duck%20%28USA%29.pce
+Dragon Saber|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FDragon%20Saber%20-%20After%20Story%20of%20Dragon%20Spirit%20%28Japan%29.pce
+Dragon Spirit|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FDragon%20Spirit%20%28USA%29.pce
+Final Soldier Special|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FFinal%20Soldier%20%28Japan%29%20%28Special%20Version%29.pce
+Gradius|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FGradius%20%28Japan%29.pce
 Madou King|https://archive.org/download/nec-pc-engine-supergrafx-champion-collection/NEC%20PC%20Engine%20SuperGrafx%20Champion%20Collection.zip/Madou%20King%20Granzort%20%28JP%29.pce
-Ryukenden|https://archive.org/download/turbo-grafx-16-romset/TurboGrafx-16.7z/Ryuuken%20Den%20%28Japan%29%20%28En%2CJa%2CZh%29%5Bt1%5D%20%28Hack_qqture2005%29.pce
+Raiden|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FRaiden%20%28USA%29.pce
+Ryukenden|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FNinja%20Ryuuken%20Den%20%28Japan%29%20%28En%2CJa%2CZh%29.pce
+Salamander|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FSalamander%20%28Japan%29.pce
+Samurai Ghost|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FSamurai-Ghost%20%28USA%29.pce
+Shinobi|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FShinobi%20%28Japan%29.pce
+Splatterhouse|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FSplatterhouse%20%28USA%29.pce
+Talespin|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FTaleSpin%20%28USA%29.pce
+Thunder Blade|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FThunder%20Blade%20%28Japan%29.pce
+Valkyrie|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FValkyrie%20no%20Densetsu%20%28Japan%29.pce
+
