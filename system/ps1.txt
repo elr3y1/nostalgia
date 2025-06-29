@@ -1,1 +1,22 @@
+scph100.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph100.bin
+scph1000.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph1000.bin
+scph1001.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph1001.bin
+scph1002.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph1002.bin
+scph101.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph101.bin
+scph102A.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph102A.bin
+scph102B.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph102B.bin
+scph102C.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph102C.bin
+scph3000.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph3000.bin
+scph3500.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph3500.bin
+scph5000.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph5000.bin
+scph5500.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph5500.bin
+scph5501.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph5501.bin
+scph5502.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph5502.bin
+scph5552.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph5552.bin
+scph7001.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph7001.bin
+scph7002.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph7002.bin
+scph7003.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph7003.bin
+scph7502.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph7502.bin
+scph9002(7502).bin|https://github.com/Abdess/retroarch_system/blob/libretro/Sony%20-%20PlayStation/scph9002(7502).bin
+
 
