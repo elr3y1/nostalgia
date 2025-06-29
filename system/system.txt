@@ -21,6 +21,16 @@ gb/gb_bios.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo
 gbc/cgb_boot.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20Gameboy%20Color/cgb_boot.bin
 gbc/gbc_bios.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20Gameboy%20Color/gbc_bios.bin
 gba/gba_bios.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20Game%20Boy%20Advance/gba_bios.bin
+gamecube/gc-dvd-20010608.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-dvd-20010608.bin
+gamecube/gc-dvd-20010831.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-dvd-20010831.bin
+gamecube/gc-dvd-20020402.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-dvd-20020402.bin
+gamecube/gc-dvd-20020823.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-dvd-20020823.bin
+gamecube/gc-ntsc-10.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-ntsc-10.bin
+gamecube/gc-ntsc-11.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-ntsc-11.bin
+gamecube/gc-ntsc-12.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-ntsc-12.bin
+gamecube/gc-pal-10.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-pal-10.bin
+gamecube/gc-pal-11.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-pal-11.bin
+gamecube/gc-pal-12.bin|https://github.com/Abdess/retroarch_system/blob/libretro/Nintendo%20-%20GameCube/gc-pal-12.bin
 msx/CARTS.SHA|https://github.com/Abdess/retroarch_system/blob/libretro/Microsoft%20-%20MSX/CARTS.SHA
 msx/CYRILLIC.FNT|https://github.com/Abdess/retroarch_system/blob/libretro/Microsoft%20-%20MSX/CYRILLIC.FNT
 msx/DISK.ROM|https://github.com/Abdess/retroarch_system/blob/libretro/Microsoft%20-%20MSX/DISK.ROM
