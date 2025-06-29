@@ -1,1 +1,7 @@
-
+ps1/scph5501.bin|https://archive.org/download/psx-bios/scph5501.bin
+ps1/
+ps1/
+ps1/
+ps2/rom1.bin|https://archive.org/download/pcsx2-bios/rom1.bin
+psp/ppge_atlas.zim|https://archive.org/download/ppsspp-assets/ppge_atlas.zim
+saturn/sega_101.bin|https://archive.org/download/saturn-bios/sega_101.bin
