@@ -1,19 +1,19 @@
 {
   "games": [
     {
-      "title": "Dino Crisis 2",
-      "fileName": "Dino Crisis 2.chd",
+      "title": "Contra",
+      "fileName": "Contra.zip",
       "cover": "https://images.launchbox-app.com//a4ee3454-6951-44f4-a521-fa51162f3079.png",
       "disc": "https://images.launchbox-app.com//9991fded-316d-4ec5-acb5-64031832108a.png",
-      "manual": "https://archive.org/download/SonyPlaystationManuals/Dino%20Crisis%202%20%28USA%29.pdf",
+      "manual": "https://archive.org/download/NESManuals/Contra%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//de7b56aa-e280-40bd-9aa4-78d5e2a2056b.png"
     },
     {
-      "title": "MediEvil 2",
-      "fileName": "MediEvil 2.chd",
+      "title": "Blaster Master",
+      "fileName": "Blaster Master.zip",
       "cover": "https://images.launchbox-app.com//f12fc611-baf1-4bcd-8451-14a8d34b6473.png",
       "disc": "https://images.launchbox-app.com//62609315-c2cc-4600-9d96-f319bdb3fb24.png",
-      "manual": "https://archive.org/download/SonyPlaystationManuals/MediEvil%20II%20%28USA%29.pdf",
+      "manual": "https://archive.org/download/NESManuals/Blaster%20Master%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//2af2886a-95af-45e6-a9b8-6d9868c4da17.png"
     },
     {
@@ -21,7 +21,7 @@
       "fileName": "Castlevania.zip",
       "cover": "https://images.launchbox-app.com//ed029744-eff6-49f0-9f6c-361be31209b8.png",
       "disc": "https://images.launchbox-app.com//7619e048-2eee-404b-992e-053976b7b1a7.png",
-      "manual": "https://archive.org/download/SonyPlaystationManuals/MediEvil%20%28USA%29.pdf",
+      "manual": "https://archive.org/download/NESManuals/Castlevania%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//940b085b-587b-4fd5-9101-62cc74908c60.png"
     },
     {
@@ -33,8 +33,16 @@
       "logo": "https://images.launchbox-app.com//245525e9-e179-4990-9474-14d02f345ca9.png"
     },
     {
+      "title": "Metal Gear",
+      "fileName": "Metal Gear.zip",
+      "cover": "https://images.launchbox-app.com//f12fc611-baf1-4bcd-8451-14a8d34b6473.png",
+      "disc": "https://images.launchbox-app.com//62609315-c2cc-4600-9d96-f319bdb3fb24.png",
+      "manual": "https://archive.org/download/NESManuals/Metal%20Gear%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//2af2886a-95af-45e6-a9b8-6d9868c4da17.png"
+    },
+    {
       "title": "Super Mario Bros",
-      "fileName": "Breath Of Fire III.chd",
+      "fileName": "Super Mario Bros.chd",
       "cover": "https://images.launchbox-app.com//e064fc74-3530-4a33-b87c-f3b9c2e3778a.png",
       "disc": "https://images.launchbox-app.com//a3d6b011-9a73-4bb1-b1f1-28aca699cfae.png",
       "manual": "https://archive.org/download/snes-manual-archive/Battletoads%20in%20Battlemaniacs%20%28USA%29.pdf",
