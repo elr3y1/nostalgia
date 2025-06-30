@@ -1,3 +1,86 @@
+{
+  "games": [
+    {
+      "title": "Contra",
+      "fileName": "Contra.zip",
+      "cover": "https://images.launchbox-app.com//a4ee3454-6951-44f4-a521-fa51162f3079.png",
+      "disc": "https://images.launchbox-app.com//9991fded-316d-4ec5-acb5-64031832108a.png",
+      "manual": "https://archive.org/download/NESManuals/Contra%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//de7b56aa-e280-40bd-9aa4-78d5e2a2056b.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    },
+    {
+      "title": "Blaster Master",
+      "fileName": "Blaster Master.zip",
+      "cover": "https://images.launchbox-app.com//f12fc611-baf1-4bcd-8451-14a8d34b6473.png",
+      "disc": "https://images.launchbox-app.com//62609315-c2cc-4600-9d96-f319bdb3fb24.png",
+      "manual": "https://archive.org/download/NESManuals/Blaster%20Master%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//2af2886a-95af-45e6-a9b8-6d9868c4da17.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    },
+    {
+      "title": "Castlevania Legacy Of Darkness",
+      "fileName": "Castlevania Legacy Of Darkness.zip",
+      "cover": "https://images.launchbox-app.com//54c23e01-8a37-405a-a110-5a04466ba2ea.png",
+      "disc": "https://images.launchbox-app.com//4b990d9b-65ab-4374-bd23-6dc7686bb157.png",
+      "manual": "https://archive.org/download/Nintendo64Manuals_201812/Castlevania%20-%20Legacy%20of%20Darkness%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//327edcac-ff85-4a8f-b7d9-d4f117688762.png"
+      "gameplay": "https://www.youtube.com/watch?v=TjUMNVDOzNE"
+      "soundtrack": "null"
+    },
+    {
+      "title": "F-Zero X",
+      "fileName": "F-Zero X.zip",
+      "cover": "https://images.launchbox-app.com//8134f65a-dfdf-4340-bd16-9fcb1c175c88.png",
+      "disc": "https://images.launchbox-app.com//6d22725f-a515-426a-8a3c-672f969bfb6f.png",
+      "manual": "https://archive.org/download/Nintendo64Manuals_201812/F-Zero%20X%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//915929f3-3af0-4441-a45d-8a061f0a8a38.png"
+      "gameplay": "https://www.youtube.com/watch?v=ugPX0W7sag0"
+      "soundtrack": "https://raw.githubusercontent.com/Valchrist23/Vic/master/gamesoundtracks/fzero-x.m3u"
+    },
+    {
+      "title": "Metal Gear",
+      "fileName": "Metal Gear.zip",
+      "cover": "https://images.launchbox-app.com//f12fc611-baf1-4bcd-8451-14a8d34b6473.png",
+      "disc": "https://images.launchbox-app.com//62609315-c2cc-4600-9d96-f319bdb3fb24.png",
+      "manual": "https://archive.org/download/NESManuals/Metal%20Gear%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//2af2886a-95af-45e6-a9b8-6d9868c4da17.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    },
+    {
+      "title": "Super Mario Bros",
+      "fileName": "Super Mario Bros.chd",
+      "cover": "https://images.launchbox-app.com//e064fc74-3530-4a33-b87c-f3b9c2e3778a.png",
+      "disc": "https://images.launchbox-app.com//a3d6b011-9a73-4bb1-b1f1-28aca699cfae.png",
+      "manual": "https://archive.org/download/snes-manual-archive/Battletoads%20in%20Battlemaniacs%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//7ac004cd-05f6-4f7b-a75d-502f04f6697c.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    },
+    {
+      "title": "Super Mario Bros 2",
+      "fileName": "Castlevania - Synphony Of The Night [!].chd",
+      "cover": "https://images.launchbox-app.com//52066f45-52a0-4920-a636-63e15e942678.png",
+      "disc": "https://images.launchbox-app.com//d0c807f4-734d-40c4-8636-b1250b882eb2.png",
+      "manual": "https://archive.org/download/SonyPlaystationManuals/Castlevania%20-%20Symphony%20of%20the%20Night%20%28USA%29.pdf",
+      "logo": "https://images.launchbox-app.com//e0111472-3f37-441e-b925-3ca1dbce6e4a.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    },
+    {
+      "title": "Super Mario Bros 3",
+      "fileName": "Metal_Gear_Solid.pbp",
+      "cover": "https://images.launchbox-app.com//5d3d25b2-7850-4b60-8446-491251a3b76c.png",
+      "disc": "https://images.launchbox-app.com//96aa0fcf-1afe-4215-b6dc-141e12b3cf3e.png",
+      "manual": "https://archive.org/download/SonyPlaystationManuals/Metal%20Gear%20Solid%20%28USA%29%20%28Disc%201%29.pdf",
+      "logo": "https://gamesdb-images.launchbox.gg/r2_4afff946-6d09-4523-b99f-9791a6bcbc3d.png"
+      "gameplay": "null"
+      "soundtrack": "null"
+    }    
+  ]
+}
 
 
-https://raw.githubusercontent.com/Valchrist23/Vic/master/gamesoundtracks/fzero-x.m3u
