@@ -7,6 +7,7 @@
       "disc": "https://images.launchbox-app.com//6334d71b-3753-4959-8c00-ff9690601611.png",
       "manual": "https://archive.org/download/snes-manual-archive/ActRaiser%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//702db1ac-e552-4f83-a1de-cac1ba847d57.png"
+      "soundtrack": "https://raw.githubusercontent.com/Valchrist23/Vic/master/music/snes/fzero.m3u"
     },
     {
       "title": "ActRiser 2",
@@ -15,6 +16,7 @@
       "disc": "https://images.launchbox-app.com//2800b552-b939-4f1c-b912-690091d82174.png",
       "manual": "https://archive.org/download/snes-manual-archive/ActRaiser%202%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//f44d5639-037c-4015-ac64-064fd52acdf5.png"
+      "soundtrack": "https://raw.githubusercontent.com/Valchrist23/Vic/master/music/snes/fzero.m3u"
     },
     {
       "title": "Aladdin",
@@ -23,6 +25,7 @@
       "disc": "https://archive.org/.../super_mario_world_disc.jpg",
       "manual": "https://archive.org/download/snes-manual-archive/Disney%27s%20Aladdin%20%28USA%29.pdf",
       "logo": "https://gamesdb-images.launchbox.gg/r2_4b8abc48-2b4b-460c-a201-c683ab19c6df.png"
+      "soundtrack": "null"
     },
     {
       "title": "Super Mario All Stars + Super Mario World",
@@ -31,6 +34,7 @@
       "disc": "https://images.launchbox-app.com//301f53ec-1c4b-4ef7-a67e-4aea146a339c.png",
       "manual": "https://archive.org/download/snes-manual-archive/Super%20Mario%20All-Stars%20%2B%20Super%20Mario%20World%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//d46d249b-5d32-4761-b117-64125965bd4f.png"
+      "soundtrack": "null"
     },
     {
       "title": "Battletoads In Battlemaniacs",
@@ -39,6 +43,7 @@
       "disc": "https://images.launchbox-app.com//99e80c2b-f5b8-477b-b491-d6c8c010a853.png",
       "manual": "https://archive.org/download/snes-manual-archive/Battletoads%20in%20Battlemaniacs%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//7634be74-4ddd-4f90-af6d-88c0c71e436b.png"
+      "soundtrack": "null"
     },
     {
       "title": "Castlevania Dracula X",
@@ -47,6 +52,7 @@
       "disc": "https://forums.cdn.launchbox.gg/monthly_2020_02/1022131630_Castlevania-DraculaX(USA).png.06514d44659d877863d8980025a432fb.png",
       "manual": "https://archive.org/download/snes-manual-archive/Castlevania%20-%20Dracula%20X%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//58e08f8d-daa8-4069-b00a-d84f997609f5.png"
+      "soundtrack": "null"
     },
     {
       "title": "Super Castlevania IV",
@@ -55,6 +61,7 @@
       "disc": "https://images.launchbox-app.com//77440fb4-f256-49e3-a8da-462b0a3cc21e.png",
       "manual": "https://archive.org/download/snes-manual-archive/Super%20Castlevania%20IV%20%28USA%29.pdf",
       "logo": "https://images.launchbox-app.com//b412a3d5-e582-4bfb-87d3-3b6e36199cc0.png"
+      "soundtrack": "null"
     }    
   ]
 }
