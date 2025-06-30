@@ -4,15 +4,15 @@
       "title": "ActRiser",
       "fileName": "ActRiser.sfc",
       "cover": "https://emumovies.com/storage/downloads/screenshots/monthly_2024_05/ActRaiser(USA).png.71a0e5796da6e47c596afb7e57c0fb47.png",
-      "disc": "https://archive.org/.../castlevania_disc.jpg",
+      "disc": "https://images.launchbox-app.com//6334d71b-3753-4959-8c00-ff9690601611.png",
       "manual": "https://archive.org/download/snes-manual-archive/ActRaiser%20%28USA%29.pdf"
     },
     {
       "title": "ActRiser 2",
       "fileName": "ActRser_2.sfc",
-      "cover": "https://archive.org/.../castlevania_cover.jpg",
-      "disc": "https://archive.org/.../castlevania_disc.jpg",
-      "manual": "https://emumovies.com/storage/downloads/screenshots/monthly_2024_05/ActRaiser2(USA).png.41c95218b1c90861074615139f165fac.png"
+      "cover": "https://emumovies.com/storage/downloads/screenshots/monthly_2024_05/ActRaiser2(USA).png.41c95218b1c90861074615139f165fac.png",
+      "disc": "https://images.launchbox-app.com//2800b552-b939-4f1c-b912-690091d82174.png",
+      "manual": "https://archive.org/download/snes-manual-archive/ActRaiser%202%20%28USA%29.pdf"
     },
     {
       "title": "Aladdin",
@@ -30,23 +30,23 @@
     },
     {
       "title": "Battletoads In Battlemaniacs",
-      "fileName": "castlevania.sfc",
-      "cover": "https://archive.org/.../castlevania_cover.jpg",
-      "disc": "https://archive.org/.../castlevania_disc.jpg",
+      "fileName": "Battletoards.sfc",
+      "cover": "https://images.launchbox-app.com//224a7df4-6360-4d05-9cb9-d0ee9a6c695c.jpg",
+      "disc": "https://images.launchbox-app.com//99e80c2b-f5b8-477b-b491-d6c8c010a853.png",
       "manual": "https://archive.org/download/snes-manual-archive/Battletoads%20in%20Battlemaniacs%20%28USA%29.pdf"
     },
     {
       "title": "Castlevania Dracula X",
-      "fileName": "castlevania_dracula_x.sfc",
+      "fileName": "Castlevania - Dracula X (U) [!].smc",
       "cover": "https://emumovies.com/storage/downloads/screenshots/monthly_2024_05/Castlevania-DraculaX(USA).png.fe9508874116e306963224270b5ec73a.png",
-      "disc": "https://archive.org/.../castlevania_disc.jpg",
+      "disc": "https://forums.cdn.launchbox.gg/monthly_2020_02/1022131630_Castlevania-DraculaX(USA).png.06514d44659d877863d8980025a432fb.png",
       "manual": "https://archive.org/download/snes-manual-archive/Castlevania%20-%20Dracula%20X%20%28USA%29.pdf"
     },
     {
-      "title": "Super_Castlevania_IV",
-      "fileName": "castlevania.sfc",
-      "cover": "https://cdn.emumovies.com/monthly_2024_07/SuperCastlevaniaIV(USA).png.f3081f6f70c6034653956c1f6df0af66.png",
-      "disc": "https://archive.org/.../castlevania_disc.jpg",
+      "title": "Super Castlevania IV",
+      "fileName": "Super_castlevania_IV.sfc",
+      "cover": "https://images.launchbox-app.com//ad4f940a-3d1a-4ee5-86eb-8c75ce196eac.png",
+      "disc": "https://images.launchbox-app.com//77440fb4-f256-49e3-a8da-462b0a3cc21e.png",
       "manual": "https://archive.org/download/snes-manual-archive/Super%20Castlevania%20IV%20%28USA%29.pdf"
     }    
   ]
