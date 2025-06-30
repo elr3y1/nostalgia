@@ -20,5 +20,4 @@ Splatterhouse|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FSplatterho
 Talespin|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FTaleSpin%20%28USA%29.pce
 Thunder Blade|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FThunder%20Blade%20%28Japan%29.pce
 Valkyrie|https://archive.org/download/pce_20240312/PCE.zip/PCE%2FValkyrie%20no%20Densetsu%20%28Japan%29.pce
-Lords Of Thunder|https://archive.org/download/cylums-turbo-grafx-cd-rom-collection/Cylum%27s%20TurboGrafx-CD%20ROM%20Collection%20%2802-20-2021%29/Lords%20of%20Thunder.chd
 
