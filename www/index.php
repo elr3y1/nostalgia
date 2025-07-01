@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VIK APP GAMES</title>
 
   <!-- Bootstrap CSS para estilos responsive y modernos -->
@@ -168,11 +169,21 @@ function openModal(game) {
 
 // Carga y muestra el soundtrack del juego desde un archivo M3U
 function loadSoundtrack(m3uUrl, logoUrl) {
+  // Si no hay URL de soundtrack, mostramos mensaje y salimos
+  if (!m3uUrl || m3uUrl.trim() === '') {
+    $('#modalTitle').text('Soundtrack no disponible');
+    $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
+    $('#modalContent').html('<div class="text-danger">Este juego no tiene una lista de reproducción disponible.</div>');
+    const modal = new bootstrap.Modal(document.getElementById('gameModal'));
+    modal.show();
+    return;
+  }
+
+  // Continuar con la carga del soundtrack si hay una URL válida
   fetch('parse_m3u.php?url=' + encodeURIComponent(m3uUrl))
     .then(res => res.json())
     .then(tracks => {
-      // Si no se encontraron pistas
-      if (tracks.length === 0) {
+      if (!Array.isArray(tracks) || tracks.length === 0) {
         $('#modalTitle').text('Soundtrack');
         $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
         $('#modalContent').html('<div class="text-danger">No se encontraron pistas en el soundtrack.</div>');
@@ -181,7 +192,6 @@ function loadSoundtrack(m3uUrl, logoUrl) {
         return;
       }
 
-      // Se encontraron pistas: crear lista de reproducción
       let html = '<div class="list-group">';
       tracks.forEach(track => {
         html += `
@@ -199,8 +209,17 @@ function loadSoundtrack(m3uUrl, logoUrl) {
       $('#modalContent').html(html);
       const modal = new bootstrap.Modal(document.getElementById('gameModal'));
       modal.show();
+    })
+    .catch(error => {
+      $('#modalTitle').text('Error al cargar soundtrack');
+      $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
+      $('#modalContent').html('<div class="text-danger">Ocurrió un error al intentar cargar el soundtrack.</div>');
+      const modal = new bootstrap.Modal(document.getElementById('gameModal'));
+      modal.show();
+      console.error('Error al cargar el soundtrack:', error);
     });
 }
+
 
 // Objeto que guarda la información de los juegos en memoria local por su ID
 const gameData = {};

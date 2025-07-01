@@ -1,7 +1,7 @@
 <?php
 // PASO 1: Definir datos de conexión LOCAL
 $host_local = 'localhost';
-$db_local   = '';
+$db_local   = 'oakley';
 $user_local = 'root';
 $pass_local = '';
 
