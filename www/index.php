@@ -48,6 +48,9 @@
       color: #fff;
       border: 1px solid #555;
     }
+    .game-image {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    }
   </style>
 </head>
 <body>
@@ -113,7 +116,14 @@ function loadGames(consola) {
       const card = $(`
         <div class="col-md-4">
           <div class="card animate__animated animate__fadeIn">
-            <img src="${game.cover}" class="card-img-top" alt="cover">
+            <div class="position-relative">
+            <img src="${game.cover}" class="card-img-top game-image" alt="cover"
+                data-id="${game.id}" data-front="${game.cover}" data-back="${game.disc}" data-state="front">
+            <button class="btn btn-sm btn-light position-absolute bottom-0 end-0 m-1 rotate-btn" data-id="${game.id}">
+                <i class="fas fa-rotate"></i>
+            </button>
+            </div>
+
             <div class="card-body">
               <h5 class="card-title text-light">${game.title}</h5>
               <div class="d-flex flex-wrap">
@@ -204,6 +214,25 @@ $('#consolaSelect').on('change', function() {
 $(document).ready(function() {
   loadConsolas();
 });
+
+// Maneja el evento click para "rotar" la imagen entre cover y disc
+$(document).on('click', '.rotate-btn', function() {
+  const id = $(this).data('id');
+  const img = $(`img[data-id="${id}"]`);
+  
+  const front = img.data('front');
+  const back = img.data('back');
+  let state = img.data('state');
+
+  if (state === 'front') {
+    img.attr('src', back);
+    img.data('state', 'back');
+  } else {
+    img.attr('src', front);
+    img.data('state', 'front');
+  }
+});
+
 </script>
 </body>
 </html>
