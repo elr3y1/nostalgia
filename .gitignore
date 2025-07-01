@@ -1,0 +1,8 @@
+# Directorios a ignorar
+covers/
+games/
+gamesoundtracks/
+syste/
+
+# Archivo específico a ignorar
+a.m3u
