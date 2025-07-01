@@ -1,42 +1,74 @@
 <?php
-header('Content-Type: application/json');
+// Mostrar errores (solo durante desarrollo)
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-// Verifica si se pasó la URL
-if (!isset($_GET['url'])) {
-    echo json_encode([]);
+// Validar que se ha enviado el parámetro 'url'
+if (!isset($_GET['url']) || empty($_GET['url'])) {
+    http_response_code(400); // Bad Request
+    echo json_encode(['error' => 'URL no proporcionada']);
     exit;
 }
 
-$m3uUrl = $_GET['url'];
-$lines = @file($m3uUrl); // Obtiene el contenido del M3U línea por línea
+// Obtener la URL del parámetro GET y sanearla
+$url = filter_var($_GET['url'], FILTER_VALIDATE_URL);
 
-// Si no se pudo leer el archivo, salimos
-if (!$lines) {
-    echo json_encode([]);
+if (!$url) {
+    http_response_code(400); // Bad Request
+    echo json_encode(['error' => 'URL inválida']);
     exit;
 }
 
+// Función para obtener contenido remoto con cURL
+function getRemoteFile($url) {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);        // Retornar como string
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);        // Seguir redirecciones
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');    // User-Agent común
+    $data = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        curl_close($ch);
+        return false; // Si hay error, retorna false
+    }
+
+    curl_close($ch);
+    return $data;
+}
+
+// Obtener el contenido del archivo M3U
+$data = getRemoteFile($url);
+
+if (!$data) {
+    http_response_code(500); // Internal Server Error
+    echo json_encode(['error' => 'No se pudo obtener el archivo remoto']);
+    exit;
+}
+
+// Procesar líneas del archivo M3U
+$lines = explode("\n", $data);
 $tracks = [];
-$current = []; // Variable temporal para almacenar info entre líneas
+$title = '';
 
+// Recorrer cada línea
 foreach ($lines as $line) {
     $line = trim($line);
+    if (empty($line)) continue;
 
-    // Si la línea comienza con #EXTINF, contiene metadata
-    if (strpos($line, '#EXTINF') === 0) {
-        // Buscar logo y título dentro de la línea
-        preg_match('/tvg-logo="([^"]+)"/', $line, $logoMatch);
-        preg_match('/,(.*)$/', $line, $titleMatch);
-
-        $current['logo'] = $logoMatch[1] ?? '';
-        $current['title'] = $titleMatch[1] ?? 'Pista sin título';
-
-    // Si la línea no es comentario y contiene .mp3, asumimos que es la URL del audio
-    } elseif (!empty($line) && preg_match('/\.mp3$/i', $line)) {
-        $current['url'] = $line;
-        $tracks[] = $current; // Agregamos al array de pistas
-        $current = []; // Limpiamos para la próxima pista
+    if (strpos($line, '#EXTINF:') === 0) {
+        // Extraer título después de la coma
+        $parts = explode(',', $line, 2);
+        $title = isset($parts[1]) ? trim($parts[1]) : 'Sin título';
+    } elseif (strpos($line, '#') !== 0) {
+        // Si es una URL válida de archivo, guardar con el título
+        $tracks[] = [
+            'title' => urldecode($title),
+            'url'   => trim($line)
+        ];
+        $title = ''; // Resetear título para la siguiente pista
     }
 }
 
-echo json_encode($tracks);
+// Retornar los datos en formato JSON
+header('Content-Type: application/json');
+echo json_encode($tracks, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
