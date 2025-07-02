@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>VIK APP GAMES</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #emulator {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 VIK APP GAMES</h1>
+  <p>Selecciona un juego para comenzar:</p>
+
+  <button onclick="startGame('roms/castlevania.nes', 'nes')">🕹️ Castlevania (NES)</button>
+  <button onclick="startGame('roms/aladdin.sfc', 'snes')">🧞 Aladdin (SNES)</button>
+
+  <div id="emulator"></div>
+
+  <script src="data/emulator.min.js"></script>
+  <script>
+    function startGame(rom, core) {
+      const container = document.getElementById('emulator');
+      container.innerHTML = ''; // limpia contenido anterior
+
+      new Emulator(container, {
+        core: core,
+        rom_url: rom,
+        config_path: "data/",
+        data_path: "data/",
+        js_path: "data/",
+        cores_path: "data/cores/",
+        localization_path: "data/localization/",
+        legacy: false,
+        crop: false
+      });
+    }
+  </script>
+
+</body>
+</html>

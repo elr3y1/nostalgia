@@ -50,8 +50,14 @@
       border: 1px solid #555;
     }
     .game-image {
-    transition: transform 0.4s ease, opacity 0.4s ease;
+      transition: transform 0.4s ease, opacity 0.4s ease;
     }
+    .playing-track {
+      background-color: #198754 !important; /* Verde Bootstrap */
+      color: white !important;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -88,6 +94,7 @@
 <!-- Librerías JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
 <script>
 
@@ -168,57 +175,201 @@ function openModal(game) {
 }
 
 // Carga y muestra el soundtrack del juego desde un archivo M3U
+let playlist = [];
+let currentTrackIndex = 0;
+let sound = null;
+let progressInterval = null;
+
 function loadSoundtrack(m3uUrl, logoUrl) {
-  // Si no hay URL de soundtrack, mostramos mensaje y salimos
+  const $modal = new bootstrap.Modal(document.getElementById('gameModal'));
+
+  // Si no hay URL de soundtrack
   if (!m3uUrl || m3uUrl.trim() === '') {
     $('#modalTitle').text('Soundtrack no disponible');
     $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
-    $('#modalContent').html('<div class="text-danger">Este juego no tiene una lista de reproducción disponible.</div>');
-    const modal = new bootstrap.Modal(document.getElementById('gameModal'));
-    modal.show();
+    $('#modalContent').html(`
+      <div class="text-center text-warning py-4">
+        <i class="fas fa-music fa-2x mb-2"></i><br>
+        Este juego no tiene una lista de reproducción disponible.
+      </div>`);
+    $modal.show();
     return;
   }
 
-  // Continuar con la carga del soundtrack si hay una URL válida
+  // Intenta obtener el contenido del M3U
   fetch('parse_m3u.php?url=' + encodeURIComponent(m3uUrl))
     .then(res => res.json())
     .then(tracks => {
       if (!Array.isArray(tracks) || tracks.length === 0) {
-        $('#modalTitle').text('Soundtrack');
+        $('#modalTitle').text('Soundtrack vacío');
         $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
-        $('#modalContent').html('<div class="text-danger">No se encontraron pistas en el soundtrack.</div>');
-        const modal = new bootstrap.Modal(document.getElementById('gameModal'));
-        modal.show();
+        $('#modalContent').html(`
+          <div class="text-center text-danger py-4">
+            <i class="fas fa-exclamation-circle fa-2x mb-2"></i><br>
+            No se encontraron pistas en el soundtrack.
+          </div>`);
+        $modal.show();
         return;
       }
 
-      let html = '<div class="list-group">';
-      tracks.forEach(track => {
+      // Hay pistas, construir reproductor y lista
+      playlist = tracks;
+      currentTrackIndex = 0;
+
+      let html = `
+        <div class="text-center mb-3">
+          ${logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : ''}
+          <div id="nowPlaying" class="mt-2 fw-bold text-white"></div>
+          <div class="mt-3">
+            <button class="btn btn-primary me-2" onclick="playPreviousTrack()"><i class="fas fa-backward"></i></button>
+            <button class="btn btn-success me-2" onclick="playCurrentTrack()"><i class="fas fa-play"></i></button>
+            <button class="btn btn-secondary me-2" onclick="pauseCurrentTrack()"><i class="fas fa-pause"></i></button>
+            <button class="btn btn-primary" onclick="playNextTrack()"><i class="fas fa-forward"></i></button>
+          </div>
+          <div class="mt-3 px-3 text-light w-100">
+            <div class="d-flex justify-content-between">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+            <div id="progressBar" style="height: 8px; background-color: #555; border-radius: 4px; cursor: pointer; position: relative;">
+              <div id="progressFill" style="height: 100%; width: 0%; background-color: #28a745; border-radius: 4px;"></div>
+            </div>
+          </div>
+        </div>
+        <ul class="list-group" id="playlistList">`;
+
+      tracks.forEach((track, index) => {
+        const safeTitle = track.title?.trim() || `Track ${index + 1}`;
         html += `
-          <div class="list-group-item bg-dark text-light">
-            ${track.title}
-            <audio controls class="w-100 mt-2">
-              <source src="${track.url}" type="audio/mpeg">
-            </audio>
-          </div>`;
+          <li class="list-group-item bg-dark text-light" onclick="playTrackAt(${index})" style="cursor:pointer;">
+            ${safeTitle}
+          </li>`;
       });
-      html += '</div>';
+
+      html += '</ul>';
 
       $('#modalTitle').text('Soundtrack');
-      $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
+      $('#modalLogo').html(''); // Opcional: podrías dejarlo si deseas mostrar el logo arriba
       $('#modalContent').html(html);
-      const modal = new bootstrap.Modal(document.getElementById('gameModal'));
-      modal.show();
+      $modal.show();
+
+      setupProgressBarClick();
+      playTrackAt(currentTrackIndex);
     })
     .catch(error => {
       $('#modalTitle').text('Error al cargar soundtrack');
       $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
-      $('#modalContent').html('<div class="text-danger">Ocurrió un error al intentar cargar el soundtrack.</div>');
-      const modal = new bootstrap.Modal(document.getElementById('gameModal'));
-      modal.show();
+      $('#modalContent').html(`
+        <div class="text-center text-danger py-4">
+          <i class="fas fa-bug fa-2x mb-2"></i><br>
+          Ocurrió un error al intentar cargar el soundtrack.
+        </div>`);
+      $modal.show();
       console.error('Error al cargar el soundtrack:', error);
     });
 }
+
+
+function playTrackAt(index) {
+  if (index < 0 || index >= playlist.length) return;
+
+  if (sound) {
+    sound.stop();
+    sound.unload();
+    clearInterval(progressInterval);
+  }
+
+  // Quitar la clase de todas las pistas
+  document.querySelectorAll('#playlistList .list-group-item').forEach(el => {
+    el.classList.remove('playing-track');
+  });
+
+  // Agregar clase a la pista actual
+  const currentItem = document.querySelector(`#playlistList .list-group-item:nth-child(${index + 1})`);
+  if (currentItem) currentItem.classList.add('playing-track');
+
+  const track = playlist[index];
+  currentTrackIndex = index;
+
+  $('#nowPlaying').text(track.title);
+
+  sound = new Howl({
+    src: [track.url],
+    html5: true,
+    onplay: () => {
+      progressInterval = setInterval(updateProgressBar, 500);
+    },
+    onend: () => {
+      clearInterval(progressInterval);
+      playNextTrack();
+    }
+  });
+
+  sound.play();
+}
+
+function playCurrentTrack() {
+  if (sound) {
+    sound.play();
+    progressInterval = setInterval(updateProgressBar, 500);
+  }
+}
+
+function pauseCurrentTrack() {
+  if (sound) {
+    sound.pause();
+    clearInterval(progressInterval);
+  }
+}
+
+function playNextTrack() {
+  if (currentTrackIndex + 1 < playlist.length) {
+    playTrackAt(currentTrackIndex + 1);
+  }
+}
+
+function playPreviousTrack() {
+  if (currentTrackIndex > 0) {
+    playTrackAt(currentTrackIndex - 1);
+  }
+}
+
+function updateProgressBar() {
+  if (!sound) return;
+
+  const seek = sound.seek();
+  const duration = sound.duration();
+
+  if (typeof seek === 'number' && typeof duration === 'number') {
+    document.getElementById('currentTime').innerText = formatTime(seek);
+    document.getElementById('duration').innerText = formatTime(duration);
+    const percentage = (seek / duration) * 100;
+    document.getElementById('progressFill').style.width = percentage + '%';
+  }
+}
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${s < 10 ? '0' + s : s}`;
+}
+
+function setupProgressBarClick() {
+  setTimeout(() => {
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar) {
+      progressBar.addEventListener('click', function (e) {
+        if (!sound) return;
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const percentage = x / rect.width;
+        const duration = sound.duration();
+        sound.seek(duration * percentage);
+      });
+    }
+  }, 300);
+}
+
 
 
 // Objeto que guarda la información de los juegos en memoria local por su ID
@@ -250,6 +401,22 @@ $(document).on('click', '.rotate-btn', function() {
     img.attr('src', front);
     img.data('state', 'front');
   }
+});
+document.getElementById('gameModal').addEventListener('hidden.bs.modal', () => {
+  if (sound) {
+    sound.pause();
+    sound.currentTime = 0;
+    sound = null;
+  }
+
+  // Detiene el intervalo de actualización del progreso
+  if (progressInterval) {
+    clearInterval(progressInterval);
+    progressInterval = null;
+  }
+
+  // Limpia el contenido para evitar conflictos
+  $('#modalContent').empty();
 });
 
 </script>

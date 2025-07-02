@@ -1,0 +1,16 @@
+<select onchange="cargarJuego(this.value)">
+  <option value="">-- Selecciona un juego --</option>
+  <option value="https://archive.org/download/famicomnes-games/CASTLE1.zip">Castlevania</option>
+  <option value="CASTLE1.NES">Castlevania LOCAL</option>
+  <option value="https://archive.org/download/nes-collection/Mega%20Man.zip">Mega Man</option>
+</select>
+
+<iframe id="emulador" width="800" height="600" allowfullscreen></iframe>
+
+<script>
+  function cargarJuego(rom) {
+    if (rom) {
+      document.getElementById('emulador').src = `https://demo.emulatorjs.org/?core=nes&rom=${encodeURIComponent(rom)}`;
+    }
+  }
+</script>
