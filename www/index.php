@@ -3,7 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VIK APP GAMES</title>
+  <title>RETRO GAMES</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Games</title>
+  <meta name="description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
+  <meta name="author" content="elr3y.com" />
+  <meta name="keywords" content="Retro Games, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, Sega, Game Boy" />
+
+  <!-- Metadatos para redes sociales (Open Graph para Facebook, Discord, etc.) -->
+  <meta property="og:title" content="Retro Games" />
+  <meta property="og:description" content="Revive la era dorada de los videojuegos con música, gameplay y manuales clásicos." />
+  <meta property="og:image" content="media.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://a.elr3y.com/practicacode/games/" />
+
+  <!-- Metadatos para Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Retro Games" />
+  <meta name="twitter:description" content="Revive los mejores momentos del gaming retro: música, videos y manuales originales." />
+  <meta name="twitter:image" content="media.png" />
+
 
   <!-- Bootstrap CSS para estilos responsive y modernos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
