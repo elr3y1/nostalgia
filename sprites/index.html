@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprite RPG - Dirección fluida</title>
+  <style>
+    body {
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #gameCanvas {
+      image-rendering: pixelated;
+      background: #111;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="gameCanvas" width="300" height="300"></canvas>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+const img = new Image();
+img.src = 'SNES - Chrono Trigger - The Prophet.png'; // sprite original
+
+const FRAME_WIDTH = 26;
+const FRAME_HEIGHT = 41;
+const COLUMNS = 3;
+
+// Fila por dirección (no se usa fila 4)
+const directions = {
+  down: 0,
+  up: 1,
+  right: 2,
+  left: 3
+};
+
+let direction = 'down';
+let frame = 1; // comienza en el frame central
+let posX = 100;
+let posY = 100;
+let isMoving = false;
+
+const bufferCanvas = document.createElement('canvas');
+bufferCanvas.width = FRAME_WIDTH;
+bufferCanvas.height = FRAME_HEIGHT;
+const bufferCtx = bufferCanvas.getContext('2d');
+
+img.onload = () => {
+  startAnimation();
+};
+
+function getCleanFrame(sx, sy) {
+  bufferCtx.clearRect(0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+  bufferCtx.drawImage(img, sx, sy, FRAME_WIDTH, FRAME_HEIGHT, 0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+
+  const frameData = bufferCtx.getImageData(0, 0, FRAME_WIDTH, FRAME_HEIGHT);
+  const data = frameData.data;
+
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    if (r === 179 && g === 38 && b === 189) {
+      data[i + 3] = 0;
+    }
+  }
+
+  bufferCtx.putImageData(frameData, 0, 0);
+  return bufferCanvas;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  const row = directions[direction];
+  const col = isMoving ? frame % COLUMNS : 1; // si no se mueve, usa el frame central
+
+  const sx = col * FRAME_WIDTH;
+  const sy = row * FRAME_HEIGHT;
+
+  const cleanFrame = getCleanFrame(sx, sy);
+  ctx.drawImage(cleanFrame, posX, posY);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function walk(dir, distance) {
+  direction = dir;
+  isMoving = true;
+  const speed = 2;
+  const steps = distance / speed;
+
+  for (let i = 0; i < steps; i++) {
+    switch (dir) {
+      case 'left': posX -= speed; break;
+      case 'right': posX += speed; break;
+      case 'up': posY -= speed; break;
+      case 'down': posY += speed; break;
+    }
+    frame = (frame + 1) % COLUMNS;
+    draw();
+    await sleep(100);
+  }
+
+  isMoving = false;
+  draw(); // redibujar en estado quieto
+  await sleep(500);
+}
+
+async function startAnimation() {
+  while (true) {
+    await walk('right', 100);
+    await walk('down', 100);
+    await walk('left', 100);
+    await walk('up', 100);
+  }
+}
+</script>
+
+</body>
+</html>
