@@ -80,7 +80,14 @@
       color: white !important;
       font-weight: bold;
     }
-
+    button.active {
+      transform: scale(1.2);
+      background-color: #f92672 !important; /* rosa estilo VSCode */
+      color: #fff !important;               /* texto/icono blanco */
+      border-color: #f92672 !important;
+      box-shadow: 0 0 12px #f92672;
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body>
@@ -104,8 +111,18 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+
+        <div class="ms-auto d-flex align-items-center">
+          <!-- Botón Minimizar -->
+          <button type="button" class="btn btn-sm btn-outline-light me-2" onclick="minimizeModal()" title="Minimizar">
+            <i class="fas fa-window-minimize"></i>
+          </button>
+
+          <!-- Botón Cerrar -->
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" title="Cerrar"></button>
+        </div>
       </div>
+
       <div class="modal-body">
         <div id="modalLogo" class="text-center mb-3"></div>
         <div id="modalContent"></div>
@@ -120,6 +137,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
 <script>
+let isModalMinimized = false;
+let currentModalType = null; // puede ser 'gameplay' o 'soundtrack'
 
 // Carga el listado de consolas desde el backend
 function loadConsolas() {
@@ -185,6 +204,8 @@ function loadGames(consola) {
 
 // Abre el modal con el video gameplay
 function openModal(game) {
+  currentModalType = 'gameplay';
+
   $('#modalTitle').text(game.title);
   $('#modalLogo').html(`<img src="${game.logo}" class="img-fluid" style="max-height: 150px;">`);
 
@@ -202,8 +223,11 @@ let playlist = [];
 let currentTrackIndex = 0;
 let sound = null;
 let progressInterval = null;
+let isRepeat = false;
+let isShuffle = false;
 
 function loadSoundtrack(m3uUrl, logoUrl) {
+  currentModalType = 'soundtrack';
   const $modal = new bootstrap.Modal(document.getElementById('gameModal'));
 
   // Si no hay URL de soundtrack
@@ -247,8 +271,15 @@ function loadSoundtrack(m3uUrl, logoUrl) {
             <button class="btn btn-primary me-2" onclick="playPreviousTrack()"><i class="fas fa-backward"></i></button>
             <button class="btn btn-success me-2" onclick="playCurrentTrack()"><i class="fas fa-play"></i></button>
             <button class="btn btn-secondary me-2" onclick="pauseCurrentTrack()"><i class="fas fa-pause"></i></button>
-            <button class="btn btn-primary" onclick="playNextTrack()"><i class="fas fa-forward"></i></button>
+            <button class="btn btn-primary me-2" onclick="playNextTrack()"><i class="fas fa-forward"></i></button>
+            <button class="btn btn-warning me-2" onclick="toggleRepeat()" id="repeatBtn" title="Repetir pista actual">
+              <i class="fas fa-redo"></i>
+            </button>
+            <button class="btn btn-info" onclick="toggleShuffle()" id="shuffleBtn" title="Modo aleatorio">
+              <i class="fas fa-random"></i>
+            </button>
           </div>
+
           <div class="mt-3 px-3 text-light w-100">
             <div class="d-flex justify-content-between">
               <span id="currentTime">0:00</span>
@@ -324,8 +355,19 @@ function playTrackAt(index) {
     },
     onend: () => {
       clearInterval(progressInterval);
-      playNextTrack();
+      if (isRepeat) {
+        playTrackAt(currentTrackIndex);
+      } else if (isShuffle) {
+        let nextIndex;
+        do {
+          nextIndex = Math.floor(Math.random() * playlist.length);
+        } while (nextIndex === currentTrackIndex && playlist.length > 1);
+        playTrackAt(nextIndex);
+      } else {
+        playNextTrack();
+      }
     }
+
   });
 
   sound.play();
@@ -346,15 +388,32 @@ function pauseCurrentTrack() {
 }
 
 function playNextTrack() {
-  if (currentTrackIndex + 1 < playlist.length) {
+  if (isShuffle && playlist.length > 1) {
+    let nextIndex;
+    do {
+      nextIndex = Math.floor(Math.random() * playlist.length);
+    } while (nextIndex === currentTrackIndex);
+    playTrackAt(nextIndex);
+  } else if (currentTrackIndex + 1 < playlist.length) {
     playTrackAt(currentTrackIndex + 1);
   }
 }
+
 
 function playPreviousTrack() {
   if (currentTrackIndex > 0) {
     playTrackAt(currentTrackIndex - 1);
   }
+}
+
+function toggleRepeat() {
+  isRepeat = !isRepeat;
+  document.getElementById('repeatBtn').classList.toggle('active', isRepeat);
+}
+
+function toggleShuffle() {
+  isShuffle = !isShuffle;
+  document.getElementById('shuffleBtn').classList.toggle('active', isShuffle);
 }
 
 function updateProgressBar() {
@@ -426,22 +485,69 @@ $(document).on('click', '.rotate-btn', function() {
   }
 });
 document.getElementById('gameModal').addEventListener('hidden.bs.modal', () => {
+  if (isModalMinimized) return; // No hacer nada si fue una minimización
+
   if (sound) {
     sound.pause();
     sound.currentTime = 0;
     sound = null;
   }
 
-  // Detiene el intervalo de actualización del progreso
   if (progressInterval) {
     clearInterval(progressInterval);
     progressInterval = null;
   }
 
-  // Limpia el contenido para evitar conflictos
   $('#modalContent').empty();
 });
 
+
+function minimizeModal() {
+  isModalMinimized = true; // Indica que es una minimización, no cierre real
+
+  const modal = bootstrap.Modal.getInstance(document.getElementById('gameModal'));
+  if (modal) modal.hide();
+
+  // Cambia dinámicamente el texto e ícono del minimizado
+  const minimizedPlayer = document.getElementById('minimizedPlayer');
+  const span = minimizedPlayer.querySelector('span');
+
+  if (currentModalType === 'soundtrack') {
+    span.innerHTML = '<i class="fas fa-music"></i> Reproductor minimizado';
+  } else if (currentModalType === 'gameplay') {
+    span.innerHTML = '<i class="fas fa-gamepad"></i> Gameplay minimizado';
+  } else {
+    span.innerHTML = '<i class="fas fa-window-minimize"></i> Módulo minimizado';
+  }
+
+  minimizedPlayer.classList.remove('d-none');
+}
+
+
+
+function maximizeModal() {
+  isModalMinimized = false;
+
+  const modal = new bootstrap.Modal(document.getElementById('gameModal'));
+  modal.show();
+
+  document.getElementById('minimizedPlayer').classList.add('d-none');
+
+  if (currentModalType === 'soundtrack') {
+    console.log('Restaurando soundtrack');
+  } else if (currentModalType === 'gameplay') {
+    console.log('Restaurando gameplay');
+  }
+}
+
 </script>
+<div id="minimizedPlayer" class="fixed-bottom bg-dark text-white p-2 d-none shadow-lg" style="z-index: 1055;">
+  <div class="d-flex justify-content-between align-items-center">
+    <span id="minimizedText" class="ms-3"></span>
+    <button class="btn btn-sm btn-outline-light me-3" onclick="maximizeModal()">
+      <i class="fas fa-window-restore"></i> Restaurar
+    </button>
+  </div>
+</div>
 </body>
 </html>
