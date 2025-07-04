@@ -1,0 +1,47 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Archives
+https://archive.org/download/GoldeneyeOSTRemake/Archives.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Aztec
+https://archive.org/download/GoldeneyeOSTRemake/Aztec.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Bunker 2
+https://archive.org/download/GoldeneyeOSTRemake/Bunker%202.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Bunker
+https://archive.org/download/GoldeneyeOSTRemake/Bunker.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Caverns
+https://archive.org/download/GoldeneyeOSTRemake/Caverns.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Control
+https://archive.org/download/GoldeneyeOSTRemake/Control.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Cradle
+https://archive.org/download/GoldeneyeOSTRemake/Cradle.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Dam
+https://archive.org/download/GoldeneyeOSTRemake/Dam.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Depot
+https://archive.org/download/GoldeneyeOSTRemake/Depot.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Egyptian
+https://archive.org/download/GoldeneyeOSTRemake/Egyptian.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",End Credits
+https://archive.org/download/GoldeneyeOSTRemake/End%20Credits.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Facility
+https://archive.org/download/GoldeneyeOSTRemake/Facility.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Frigate
+https://archive.org/download/GoldeneyeOSTRemake/Frigate.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Menu Screen
+https://archive.org/download/GoldeneyeOSTRemake/Menu%20Screen.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Pause Menu
+https://archive.org/download/GoldeneyeOSTRemake/Pause%20Menu.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Runway
+https://archive.org/download/GoldeneyeOSTRemake/Runway.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Silo
+https://archive.org/download/GoldeneyeOSTRemake/Silo.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Statue
+https://archive.org/download/GoldeneyeOSTRemake/Statue.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Streets
+https://archive.org/download/GoldeneyeOSTRemake/Streets.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Surface (Morning)
+https://archive.org/download/GoldeneyeOSTRemake/Surface%20%28Morning%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Surface (Night)
+https://archive.org/download/GoldeneyeOSTRemake/Surface%20%28Night%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Title Screen
+https://archive.org/download/GoldeneyeOSTRemake/Title%20Screen.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//2ea26142-61e5-44fa-883b-e55c22043544.jpg" group-title="Music",Train
+https://archive.org/download/GoldeneyeOSTRemake/Train.mp3
