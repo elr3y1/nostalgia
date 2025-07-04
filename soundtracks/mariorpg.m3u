@@ -1,33 +1,123 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",01 - Happy Adventure, Delightful Adventure
-https://archive.org/download/super-mario-rpg-ost/01%20-%20Super%20Mario%20RPG%20-%20Happy%20Adventure%2C%20Delightful%20Adventure.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",02 - Fight Against Monsters
-https://archive.org/download/super-mario-rpg-ost/02%20-%20Super%20Mario%20RPG%20-%20Fight%20Against%20Monsters.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",03 - Let's Try
-https://archive.org/download/super-mario-rpg-ost/03%20-%20Super%20Mario%20RPG%20-%20Let%27s%20Try.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",04 - Victory
-https://archive.org/download/super-mario-rpg-ost/04%20-%20Super%20Mario%20RPG%20-%20Victory.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",05 - Hello, Happy Kingdom
-https://archive.org/download/super-mario-rpg-ost/05%20-%20Super%20Mario%20RPG%20-%20Hello%2C%20Happy%20Kingdom.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",06 - The Road is Full of Dangers
-https://archive.org/download/super-mario-rpg-ost/06%20-%20Super%20Mario%20RPG%20-%20The%20Road%20is%20Full%20of%20Dangers.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",07 - Fight Against Bowser
-https://archive.org/download/super-mario-rpg-ost/07%20-%20Super%20Mario%20RPG%20-%20Fight%20Against%20Bowser.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",08 - Super Pipe House
-https://archive.org/download/super-mario-rpg-ost/08%20-%20Super%20Mario%20RPG%20-%20Super%20Pipe%20House.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",09 - Where Am I Going?
-https://archive.org/download/super-mario-rpg-ost/09%20-%20Super%20Mario%20RPG%20-%20Where%20Am%20I%20Going%3F.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",10 - Forest Maze
-https://archive.org/download/super-mario-rpg-ost/10%20-%20Super%20Mario%20RPG%20-%20Forest%20Maze.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",11 - And My Name's Booster
-https://archive.org/download/super-mario-rpg-ost/11%20-%20Super%20Mario%20RPG%20-%20And%20My%20Name%27s%20Booster.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",12 - Long Long Ago
-https://archive.org/download/super-mario-rpg-ost/12%20-%20Super%20Mario%20RPG%20-%20Long%20Long%20Ago.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",13 - Heart Beating a Little Faster
-https://archive.org/download/super-mario-rpg-ost/13%20-%20Super%20Mario%20RPG%20-%20Heart%20Beating%20a%20Little%20Faster.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",14 - Our Paradise
-https://archive.org/download/super-mario-rpg-ost/14%20-%20Super%20Mario%20RPG%20-%20Our%20Paradise.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",15 - It’s a Treasure Box of Memories
-https://archive.org/download/super-mario-rpg-ost/15%20-%20Super%20Mario%20RPG%20-%20It%E2%80%99s%20a%20Treasure%20Box%20of%20Memories.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",16 - A Letter to My Valentine
-https://archive.org/download/super-mario-rpg-ost/16%20-%20Super%20Mario%20RPG%20-%20A%20Letter%20to%20My%20Valentine.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-01 Happy Adventure, Delightful Adventure
+https://archive.org/download/super-mario-rpg-ost/1-01%20Happy%20Adventure%2C%20Delightful%20Adventure.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-02 Let's Try
+https://archive.org/download/super-mario-rpg-ost/1-02%20Let%27s%20Try.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-03 In the Flower Garden
+https://archive.org/download/super-mario-rpg-ost/1-03%20In%20the%20Flower%20Garden.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-04 Koopa Castle (First Time)
+https://archive.org/download/super-mario-rpg-ost/1-04%20Koopa%20Castle%20%28First%20Time%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-05 Fight Against Koopa
+https://archive.org/download/super-mario-rpg-ost/1-05%20Fight%20Against%20Koopa.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-06 The Sword Descends and the Stars Scatter
+https://archive.org/download/super-mario-rpg-ost/1-06%20The%20Sword%20Descends%20and%20the%20Stars%20Scatter.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-07 Super Pipe House
+https://archive.org/download/super-mario-rpg-ost/1-07%20Super%20Pipe%20House.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-08 Where Am I Going
+https://archive.org/download/super-mario-rpg-ost/1-08%20Where%20Am%20I%20Going.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-09 The Road Is Full of Dangers
+https://archive.org/download/super-mario-rpg-ost/1-09%20The%20Road%20Is%20Full%20of%20Dangers.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-10 Fight Against Monsters
+https://archive.org/download/super-mario-rpg-ost/1-10%20Fight%20Against%20Monsters.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-11 Victory!!
+https://archive.org/download/super-mario-rpg-ost/1-11%20Victory%21%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-12 Hello, Happy Kingdom
+https://archive.org/download/super-mario-rpg-ost/1-12%20Hello%2C%20Happy%20Kingdom.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-13 Explanation!
+https://archive.org/download/super-mario-rpg-ost/1-13%20Explanation%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-14 A New Partner
+https://archive.org/download/super-mario-rpg-ost/1-14%20A%20New%20Partner.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-15 Still, the Road is Full of Dangers
+https://archive.org/download/super-mario-rpg-ost/1-15%20Still%2C%20the%20Road%20is%20Full%20of%20Dangers.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-16 Nice Star
+https://archive.org/download/super-mario-rpg-ost/1-16%20Nice%20Star.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-17 Fight Against a Somewhat Stronger Monster
+https://archive.org/download/super-mario-rpg-ost/1-17%20Fight%20Against%20a%20Somewhat%20Stronger%20Monster.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-18 Here's Some Weapons!
+https://archive.org/download/super-mario-rpg-ost/1-18%20Here%27s%20Some%20Weapons%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-19 Fight Against an Armed Boss
+https://archive.org/download/super-mario-rpg-ost/1-19%20Fight%20Against%20an%20Armed%20Boss.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-20 Got a Star Piece
+https://archive.org/download/super-mario-rpg-ost/1-20%20Got%20a%20Star%20Piece.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-21 The Dungeon Is Full of Monsters
+https://archive.org/download/super-mario-rpg-ost/1-21%20The%20Dungeon%20Is%20Full%20of%20Monsters.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-22 Let's Go Down the Wine River
+https://archive.org/download/super-mario-rpg-ost/1-22%20Let%27s%20Go%20Down%20the%20Wine%20River.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-23 Grandpa and the Delightful Tadpoles
+https://archive.org/download/super-mario-rpg-ost/1-23%20Grandpa%20and%20the%20Delightful%20Tadpoles.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-24 Shock!
+https://archive.org/download/super-mario-rpg-ost/1-24%20Shock%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-25 Sad Song
+https://archive.org/download/super-mario-rpg-ost/1-25%20Sad%20Song.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-26 Let's Play 'Geno'
+https://archive.org/download/super-mario-rpg-ost/1-26%20Let%27s%20Play%20%27Geno%27.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-27 Geno Awakens
+https://archive.org/download/super-mario-rpg-ost/1-27%20Geno%20Awakens.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-28 Beware the Forest's Mushrooms
+https://archive.org/download/super-mario-rpg-ost/1-28%20Beware%20the%20Forest%27s%20Mushrooms.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-29 Rose Town
+https://archive.org/download/super-mario-rpg-ost/1-29%20Rose%20Town.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-30 Hello from the Pipe
+https://archive.org/download/super-mario-rpg-ost/1-30%20Hello%20from%20the%20Pipe.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-31 Welcome! Yo'ster Island!!
+https://archive.org/download/super-mario-rpg-ost/1-31%20Welcome%21%20Yo%27ster%20Island%21%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-32 Let's Race
+https://archive.org/download/super-mario-rpg-ost/1-32%20Let%27s%20Race.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-33 Hard-Working Moles Are Good Moles
+https://archive.org/download/super-mario-rpg-ost/1-33%20Hard-Working%20Moles%20Are%20Good%20Moles.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-34 Docaty Mountain Railroad
+https://archive.org/download/super-mario-rpg-ost/1-34%20Docaty%20Mountain%20Railroad.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-35 Welcome to Booster Tower
+https://archive.org/download/super-mario-rpg-ost/1-35%20Welcome%20to%20Booster%20Tower.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-36 And My Name's Booster
+https://archive.org/download/super-mario-rpg-ost/1-36%20And%20My%20Name%27s%20Booster.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-37 Long Long Ago...
+https://archive.org/download/super-mario-rpg-ost/1-37%20Long%20Long%20Ago....mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-38 Heart Beating a Little Faster
+https://archive.org/download/super-mario-rpg-ost/1-38%20Heart%20Beating%20a%20Little%20Faster.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",1-39 Slope
+https://archive.org/download/super-mario-rpg-ost/1-39%20Slope.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-01 The Merry Mary Bell Rings
+https://archive.org/download/super-mario-rpg-ost/2-01%20The%20Merry%20Mary%20Bell%20Rings.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-02 Celebrational Melody
+https://archive.org/download/super-mario-rpg-ost/2-02%20Celebrational%20Melody.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-03 The Starlight's Flower Shines on Star Hill
+https://archive.org/download/super-mario-rpg-ost/2-03%20The%20Starlight%27s%20Flower%20Shines%20on%20Star%20Hill.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-04 Sunken Ship
+https://archive.org/download/super-mario-rpg-ost/2-04%20Sunken%20Ship.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-05 Go Shopping in Ripple Town
+https://archive.org/download/super-mario-rpg-ost/2-05%20Go%20Shopping%20in%20Ripple%20Town.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-06 Our Paradise _Monstown_
+https://archive.org/download/super-mario-rpg-ost/2-06%20Our%20Paradise%20_Monstown_.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-07 Fight Against Crystaller
+https://archive.org/download/super-mario-rpg-ost/2-07%20Fight%20Against%20Crystaller.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-08 Victory Over Culex
+https://archive.org/download/super-mario-rpg-ost/2-08%20Victory%20Over%20Culex.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-09 Conversation with Culex
+https://archive.org/download/super-mario-rpg-ost/2-09%20Conversation%20with%20Culex.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-10 You and Toadofski Create Exquisite Music
+https://archive.org/download/super-mario-rpg-ost/2-10%20You%20and%20Toadofski%20Create%20Exquisite%20Music.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-11 Let's Do the Fooka-Fooka!
+https://archive.org/download/super-mario-rpg-ost/2-11%20Let%27s%20Do%20the%20Fooka-Fooka%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-12 Margarie Margarita
+https://archive.org/download/super-mario-rpg-ost/2-12%20Margarie%20Margarita.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-13 Dodo's Coming!!
+https://archive.org/download/super-mario-rpg-ost/2-13%20Dodo%27s%20Coming%21%21.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-14 Barrel Volcano
+https://archive.org/download/super-mario-rpg-ost/2-14%20Barrel%20Volcano.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-15 The Axem Rangers Drop In
+https://archive.org/download/super-mario-rpg-ost/2-15%20The%20Axem%20Rangers%20Drop%20In.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-16 Koopa Castle (Second Time)
+https://archive.org/download/super-mario-rpg-ost/2-16%20Koopa%20Castle%20%28Second%20Time%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-17 Weapons Factory
+https://archive.org/download/super-mario-rpg-ost/2-17%20Weapons%20Factory.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-18 Fight Against Smithy
+https://archive.org/download/super-mario-rpg-ost/2-18%20Fight%20Against%20Smithy.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-19 Fight Against Smithy, Who Likes Transforming
+https://archive.org/download/super-mario-rpg-ost/2-19%20Fight%20Against%20Smithy%2C%20Who%20Likes%20Transforming.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-20 Goodbye Geno... _ Seeking Dreams Through the Window of the Stars
+https://archive.org/download/super-mario-rpg-ost/2-20%20Goodbye%20Geno...%20_%20Seeking%20Dreams%20Through%20the%20Window%20of%20the%20Stars.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-21 Happy Parade, Delightful Parade _ And the Parade Draws to a Close...
+https://archive.org/download/super-mario-rpg-ost/2-21%20Happy%20Parade%2C%20Delightful%20Parade%20_%20And%20the%20Parade%20Draws%20to%20a%20Close....mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//e0495ddd-046e-4ea9-847b-dc069edd01b5.png" group-title="Music",2-22 The End!
+https://archive.org/download/super-mario-rpg-ost/2-22%20The%20End%21.mp3
