@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RETRO GAMES</title>
+  <title>Retro Nostalgia</title>
   <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Games</title>
+  <title>Retro Nostalgia</title>
   <meta name="description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
   <meta name="author" content="elr3y.com" />
-  <meta name="keywords" content="Retro Games, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, Sega, Game Boy" />
+  <meta name="keywords" content="Retro Nostalgia, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, N64, Playstation" />
 
   <!-- Metadatos para redes sociales (Open Graph para Facebook, Discord, etc.) -->
-  <meta property="og:title" content="Retro Games" />
+  <meta property="og:title" content="Retro Nostalgia" />
   <meta property="og:description" content="Revive la era dorada de los videojuegos con música, gameplay y manuales clásicos." />
   <meta property="og:image" content="media.png" />
   <meta property="og:type" content="website" />
@@ -23,9 +23,9 @@
 
   <!-- Metadatos para Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Retro Games" />
+  <meta name="twitter:title" content="Retro Nostalgia" />
   <meta name="twitter:description" content="Revive los mejores momentos del gaming retro: música, videos y manuales originales." />
-  <meta name="twitter:image" content="media.png" />
+  <meta name="twitter:image" content="media.jpg" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
