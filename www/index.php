@@ -166,45 +166,59 @@ function loadGames(consola) {
     const container = $('#cardsContainer').empty(); // limpia el contenedor
 
     games.forEach(game => {
-      // Crea la estructura HTML de cada tarjeta de juego
+      // Construye los botones condicionalmente
+      let manualBtn = '';
+      let gameplayBtn = '';
+
+      if (game.manual) {
+        manualBtn = `
+          <a href="${game.manual}" class="btn btn-outline-info btn-sm btn-custom" target="_blank">
+            <i class="fas fa-${consola === 'musica' ? 'info-circle' : 'book'}"></i> ${consola === 'musica' ? 'Información' : 'Manual'}
+          </a>`;
+      }
+
+      if (game.gameplay && consola !== 'musica') {
+        gameplayBtn = `
+          <button class="btn btn-outline-danger btn-sm btn-custom" onclick="openModal(gameData[${game.id}])">
+            <i class="fas fa-gamepad"></i> Gameplay
+          </button>`;
+      } else if (consola === 'musica' && game.gameplay) {
+        gameplayBtn = `
+          <a href="${game.gameplay}" class="btn btn-outline-danger btn-sm btn-custom" target="_blank">
+            <i class="fab fa-youtube"></i> Video
+          </a>`;
+      }
+
       const card = $(`
         <div class="col-md-4">
           <div class="card animate__animated animate__fadeIn">
             <div class="position-relative">
-            <img src="${game.cover}" class="card-img-top game-image" alt="cover"
-                data-id="${game.id}" data-front="${game.cover}" data-back="${game.disc}" data-state="front">
-            <button class="btn btn-sm btn-light position-absolute bottom-0 end-0 m-1 rotate-btn" data-id="${game.id}">
-                <i class="fas fa-rotate"></i>
-            </button>
+              <img src="${game.cover}" class="card-img-top game-image" alt="cover"
+                  data-id="${game.id}" data-front="${game.cover}" data-back="${game.disc}" data-state="front">
+              <button class="btn btn-sm btn-light position-absolute bottom-0 end-0 m-1 rotate-btn" data-id="${game.id}">
+                  <i class="fas fa-rotate"></i>
+              </button>
             </div>
-
             <div class="card-body">
               <h5 class="card-title text-light">${game.title}</h5>
-              <div class="d-flex flex-wrap">
-                <!-- Botón para abrir el manual en PDF -->
-                <a href="${game.manual}" class="btn btn-outline-info btn-sm btn-custom" target="_blank">
-                  <i class="fas fa-book"></i> Manual
-                </a>
-
-                <!-- Botón para abrir el gameplay en modal -->
-                <button class="btn btn-outline-danger btn-sm btn-custom" onclick="openModal(gameData[${game.id}])">
-                  <i class="fas fa-gamepad"></i> Gameplay
-                </button>
-
-                <!-- Botón para abrir el soundtrack en modal -->
+              <div class="d-flex flex-wrap gap-1">
+                ${manualBtn}
+                ${gameplayBtn}
                 <button class="btn btn-outline-success btn-sm btn-custom" onclick="loadSoundtrack('${game.soundtrack}', '${game.logo}')">
                   <i class="fas fa-music"></i> Soundtrack
                 </button>
               </div>
             </div>
           </div>
-        </div>`);
+        </div>
+      `);
 
       container.append(card); // añade la tarjeta al contenedor
       gameData[game.id] = game; // guarda los datos localmente por ID
     });
   });
 }
+
 
 // Abre el modal con el video gameplay
 function openModal(game) {
