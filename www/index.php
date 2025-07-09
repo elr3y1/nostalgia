@@ -101,7 +101,7 @@
   
   <!-- Selector de consola -->
   <div class="mb-4">
-    <label for="consolaSelect" class="form-label">Selecciona una consola:</label>
+    <label for="consolaSelect" class="form-label">Selecciona una categoría:</label>
     <select id="consolaSelect" class="form-select"></select>
   </div>
 
