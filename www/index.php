@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Retro Nostalgia</title>
+  <title>Nosgic</title>
   <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro Nostalgia</title>
+  <title>Nosgic</title>
   <meta name="description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
   <meta name="author" content="elr3y.com" />
-  <meta name="keywords" content="Retro Nostalgia, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, N64, Playstation" />
+  <meta name="keywords" content="Nosgic, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, N64, Playstation" />
 
   <!-- Metadatos para redes sociales (Open Graph para Facebook, Discord, etc.) -->
-  <meta property="og:title" content="Retro Nostalgia" />
-  <meta property="og:description" content="Revive la era dorada de los videojuegos con música, gameplay y manuales clásicos." />
+  <meta property="og:title" content="Nosgic" />
+  <meta property="og:description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
   <meta property="og:image" content="media.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://a.elr3y.com/practicacode/games/" />
 
   <!-- Metadatos para Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Retro Nostalgia" />
+  <meta name="twitter:title" content="Nosgic" />
   <meta name="twitter:description" content="Revive los mejores momentos del gaming retro: música, videos y manuales originales." />
   <meta name="twitter:image" content="media.jpg" />
 
