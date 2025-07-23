@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nosgic</title>
   <meta name="description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
-  <meta name="author" content="elr3y.com" />
+  <meta name="author" content="goodmemoriesx.club" />
   <meta name="keywords" content="Nosgic, videojuegos clásicos, soundtracks, manuales, gameplay, SNES, NES, N64, Playstation" />
 
   <!-- Metadatos para redes sociales (Open Graph para Facebook, Discord, etc.) -->
@@ -19,13 +19,13 @@
   <meta property="og:description" content="Explora soundtracks clásicos, gameplays nostálgicos y manuales originales de videojuegos retro. Todo en un solo lugar." />
   <meta property="og:image" content="media.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://a.elr3y.com/practicacode/games/" />
+  <meta property="og:url" content="https://nosgic.goodmemoriesx.club" />
 
   <!-- Metadatos para Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nosgic" />
   <meta name="twitter:description" content="Revive los mejores momentos del gaming retro: música, videos y manuales originales." />
-  <meta name="twitter:image" content="media.jpg" />
+  <meta name="twitter:image" content="media.png" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
