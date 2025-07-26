@@ -173,16 +173,16 @@ function loadGames(consola) {
       if (game.manual) {
         manualBtn = `
           <a href="${game.manual}" class="btn btn-outline-info btn-sm btn-custom" target="_blank">
-            <i class="fas fa-${consola === 'musica' ? 'info-circle' : 'book'}"></i> ${consola === 'musica' ? 'Información' : 'Manual'}
+            <i class="fas fa-${consola === 'musica' || consola === 'covers tributo' ? 'info-circle' : 'book'}"></i> ${consola === 'musica' || consola === 'covers tributo' ? 'Información' : 'Manual'}
           </a>`;
       }
-
-      if (game.gameplay && consola !== 'musica') {
+      
+      if (game.gameplay && consola !== 'musica' && consola !== 'covers tributo') {
         gameplayBtn = `
           <button class="btn btn-outline-danger btn-sm btn-custom" onclick="openModal(gameData[${game.id}])">
             <i class="fas fa-gamepad"></i> Gameplay
-          </button>`;
-      } else if (consola === 'musica' && game.gameplay) {
+          </button>`;      
+      } else if ((consola === 'musica' || consola === 'covers tributo') && game.gameplay) {
         gameplayBtn = `
           <a href="${game.gameplay}" class="btn btn-outline-danger btn-sm btn-custom" target="_blank">
             <i class="fab fa-youtube"></i> Video
