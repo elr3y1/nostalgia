@@ -1,3 +1,6 @@
+<?php
+include 'trafico_web.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -107,6 +110,11 @@
 
   <!-- Aquí se mostrarán las tarjetas de los juegos -->
   <div id="cardsContainer" class="row g-3"></div>
+
+  <div class="container text-center mt-5">
+      <p>Vistas: <?php echo $visitas_totales; ?></p>
+      <p>Visitas: <?php echo $visitas_unicas; ?></p>
+  </div>
 </div>
 
 <!-- Modal que se usa tanto para gameplay como para soundtrack -->
