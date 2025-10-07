@@ -1,0 +1,42 @@
+YT-DLP DARK DOWNLOADER
+Fecha: 2025-10-07T14:46:20-07:00
+Cmd: "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\yt-dlp.exe" --no-part --restrict-filenames --hls-prefer-ffmpeg --merge-output-format mp4 --ffmpeg-location "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\ffmpeg.exe" -o "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley.mp4" "https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p.m3u8"
+---
+[generic] Extracting URL: https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p.m3u8
+[generic] 1080p: Downloading webpage
+[generic] 1080p: Downloading m3u8 information
+[generic] 1080p: Checking m3u8 live status
+[info] 1080p: Downloading 1 format(s): 0
+[download] Destination: C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley.mp4
+mime type is not rfc8216 compliant
+[hls @ 000001c43280fa40] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001c43280fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p-1.ts' for reading
+[hls @ 000001c43280fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p-2.ts' for reading
+Input #0, hls, from 'https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p.m3u8':
+  Duration: 00:00:17.00, start: 0.700000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Video: h264 (Constrained Baseline) ([27][0][0][0] / 0x001B), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Output #0, mp4, to 'file:C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 25 fps, 25 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Press [q] to stop, [?] for help
+[https @ 000001c432dbbc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/45c03e15-4415-4ab6-a733-39beaf0518c5/1080p-3.ts' for reading
+[out#0/mp4 @ 000001c4331bb680] video:2294KiB audio:138KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.234989%
+frame=  425 fps=0.0 q=-1.0 Lsize=    2438KiB time=00:00:16.98 bitrate=1176.2kbits/s speed= 157x    
+[download] 100% of    2.38MiB in 00:00:00 at 6.52MiB/s

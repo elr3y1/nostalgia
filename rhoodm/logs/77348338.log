@@ -1,0 +1,52 @@
+YT-DLP DARK DOWNLOADER
+Fecha: 2025-10-07T15:00:24-07:00
+Cmd: "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\yt-dlp.exe" --no-part --restrict-filenames --hls-prefer-ffmpeg --merge-output-format mp4 --ffmpeg-location "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\ffmpeg.exe" -o "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley6.mp4" "https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p.m3u8"
+---
+[generic] Extracting URL: https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p.m3u8
+[generic] 1080p: Downloading webpage
+[generic] 1080p: Downloading m3u8 information
+[generic] 1080p: Checking m3u8 live status
+[info] 1080p: Downloading 1 format(s): 0
+[download] Destination: C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley6.mp4
+mime type is not rfc8216 compliant
+[hls @ 000002180c48fa40] Skip ('#EXT-X-VERSION:3')
+[hls @ 000002180c48fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-1.ts' for reading
+[hls @ 000002180c48fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-2.ts' for reading
+Input #0, hls, from 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p.m3u8':
+  Duration: 00:01:15.08, start: 0.700000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Video: h264 (Constrained Baseline) ([27][0][0][0] / 0x001B), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 24 fps, 24 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) ([15][0][0][0] / 0x000F), 48000 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Output #0, mp4, to 'file:C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley6.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 24 fps, 24 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Press [q] to stop, [?] for help
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-3.ts' for reading
+[https @ 000002180ccff6c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-4.ts' for reading
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-5.ts' for reading
+frame=  486 fps=0.0 q=-1.0 size=    4608KiB time=00:00:20.25 bitrate=1864.2kbits/s speed=39.3x    [https @ 000002180ccff6c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-6.ts' for reading
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-7.ts' for reading
+frame=  751 fps=738 q=-1.0 size=    9728KiB time=00:00:31.29 bitrate=2546.8kbits/s speed=30.7x    [https @ 000002180ccff6c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-8.ts' for reading
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-9.ts' for reading
+frame= 1072 fps=697 q=-1.0 size=   14336KiB time=00:00:44.66 bitrate=2629.3kbits/s speed=  29x    [https @ 000002180ccff6c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-10.ts' for reading
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-11.ts' for reading
+frame= 1368 fps=664 q=-1.0 size=   19200KiB time=00:00:57.00 bitrate=2759.4kbits/s speed=27.7x    [https @ 000002180ccff6c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-12.ts' for reading
+[https @ 000002180caabc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/4789d816-8be2-4b8f-a933-e6ed1fe4da20/1080p-13.ts' for reading
+[out#0/mp4 @ 000002180cd03500] video:24166KiB audio:611KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.064912%
+frame= 1802 fps=716 q=-1.0 Lsize=   24793KiB time=00:01:15.07 bitrate=2705.4kbits/s speed=29.8x    
+[download] 100% of   24.21MiB in 00:00:02 at 8.92MiB/s

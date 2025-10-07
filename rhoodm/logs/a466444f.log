@@ -1,0 +1,96 @@
+YT-DLP DARK DOWNLOADER
+Fecha: 2025-10-07T14:48:38-07:00
+Cmd: "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\yt-dlp.exe" --no-part --restrict-filenames --hls-prefer-ffmpeg --merge-output-format mp4 --ffmpeg-location "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\yt-dlp\ffmpeg.exe" -o "C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley2.mp4" "https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p.m3u8"
+---
+[generic] Extracting URL: https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p.m3u8
+[generic] 1080p: Downloading webpage
+[generic] 1080p: Downloading m3u8 information
+[generic] 1080p: Checking m3u8 live status
+[info] 1080p: Downloading 1 format(s): 0
+[download] Destination: C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley2.mp4
+mime type is not rfc8216 compliant
+[hls @ 000001964016fa40] Skip ('#EXT-X-VERSION:3')
+[hls @ 000001964016fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-1.ts' for reading
+[hls @ 000001964016fa40] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-2.ts' for reading
+Input #0, hls, from 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p.m3u8':
+  Duration: 00:05:40.22, start: 0.700000, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+  Stream #0:0: Video: h264 (Constrained Baseline) ([27][0][0][0] / 0x001B), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 23.98 fps, 23.98 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) ([15][0][0][0] / 0x000F), 44100 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Output #0, mp4, to 'file:C:\laragon\www\b\2024-12-16\_host\vik\vik_app_games\rhoodm\output\oakley2.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 23.98 fps, 23.98 tbr, 90k tbn
+      Metadata:
+        variant_bitrate : 0
+  Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp
+      Metadata:
+        variant_bitrate : 0
+Press [q] to stop, [?] for help
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-3.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-4.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-5.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-6.ts' for reading
+frame=  707 fps=0.0 q=-1.0 size=    5120KiB time=00:00:29.48 bitrate=1422.4kbits/s speed=56.7x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-7.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-8.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-9.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-10.ts' for reading
+frame= 1239 fps=1211 q=-1.0 size=    9984KiB time=00:00:51.67 bitrate=1582.7kbits/s speed=50.5x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-11.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-12.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-13.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-14.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-15.ts' for reading
+frame= 1871 fps=1214 q=-1.0 size=   14592KiB time=00:01:18.03 bitrate=1531.8kbits/s speed=50.6x    [https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-16.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-17.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-18.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-19.ts' for reading
+frame= 2566 fps=1244 q=-1.0 size=   20224KiB time=00:01:47.02 bitrate=1548.0kbits/s speed=51.9x    [https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-20.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-21.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-22.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-23.ts' for reading
+frame= 3023 fps=1176 q=-1.0 size=   24320KiB time=00:02:06.08 bitrate=1580.1kbits/s speed=49.1x    [https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-24.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-25.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-26.ts' for reading
+frame= 3546 fps=1146 q=-1.0 size=   29184KiB time=00:02:27.89 bitrate=1616.5kbits/s speed=47.8x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-27.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-28.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-29.ts' for reading
+frame= 3887 fps=1079 q=-1.0 size=   33280KiB time=00:02:42.12 bitrate=1681.7kbits/s speed=  45x    [https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-30.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-31.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-32.ts' for reading
+frame= 4410 fps=1070 q=-1.0 size=   38912KiB time=00:03:03.93 bitrate=1733.1kbits/s speed=44.6x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-33.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-34.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-35.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-36.ts' for reading
+frame= 4994 fps=1075 q=-1.0 size=   44032KiB time=00:03:28.29 bitrate=1731.8kbits/s speed=44.9x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-37.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-38.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-39.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-40.ts' for reading
+frame= 5557 fps=1080 q=-1.0 size=   49152KiB time=00:03:51.77 bitrate=1737.3kbits/s speed=  45x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-41.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-42.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-43.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-44.ts' for reading
+frame= 6047 fps=1067 q=-1.0 size=   53504KiB time=00:04:12.21 bitrate=1737.9kbits/s speed=44.5x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-45.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-46.ts' for reading
+frame= 6410 fps=1036 q=-1.0 size=   58112KiB time=00:04:27.35 bitrate=1780.6kbits/s speed=43.2x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-47.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-48.ts' for reading
+frame= 6724 fps=1004 q=-1.0 size=   62720KiB time=00:04:40.44 bitrate=1832.1kbits/s speed=41.9x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-49.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-50.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-51.ts' for reading
+frame= 7055 fps=977 q=-1.0 size=   67328KiB time=00:04:54.25 bitrate=1874.4kbits/s speed=40.8x    [https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-52.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-53.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-54.ts' for reading
+frame= 7614 fps=984 q=-1.0 size=   72448KiB time=00:05:17.56 bitrate=1868.9kbits/s speed=  41x    [https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-55.ts' for reading
+[https @ 00000196409726c0] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-56.ts' for reading
+[https @ 000001964071bc00] Opening 'https://media.ccdn.cloud/luxottica-csc/videos/6958954c-362c-4871-b9c1-1aec210ef5ca/1080p-57.ts' for reading
+[out#0/mp4 @ 0000019640b1f080] video:74020KiB audio:2758KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.217540%
+frame= 8157 fps=1004 q=-1.0 Lsize=   76945KiB time=00:05:40.19 bitrate=1852.9kbits/s speed=41.9x    
+[download] 100% of   75.14MiB in 00:00:08 at 9.02MiB/s
