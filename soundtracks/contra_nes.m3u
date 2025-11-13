@@ -1,27 +1,24 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",01. Contra (Title Screen)
-https://vgmsite.com/soundtracks/contra-1988-nes/iwbrswxont/01.%20Contra%20%28Title%20Screen%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",02. Start Demon
-https://vgmsite.com/soundtracks/contra-1988-nes/tumyhsoeuv/02.%20Start%20Demon.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",03. Jungle Battle (Stage 1 & Stage 7)
-https://vgmsite.com/soundtracks/contra-1988-nes/uciisnhcls/03.%20Jungle%20Battle%20%28Stage%201%20%26%20Stage%207%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",04. Triumphal Return 1 (Stage Clear)
-https://vgmsite.com/soundtracks/contra-1988-nes/svajwefujv/04.%20Triumphal%20Return%201%20%28Stage%20Clear%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",05. Maze Fortress 1 (Stage 2 & Stage 4)
-https://vgmsite.com/soundtracks/contra-1988-nes/dwtxktzama/05.%20Maze%20Fortress%201%20%28Stage%202%20%26%20Stage%204%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",06. Maze Fortress 2 (Stage 2 Boss & Stage 4 Boss)
-https://vgmsite.com/soundtracks/contra-1988-nes/notteflvgj/06.%20Maze%20Fortress%202%20%28Stage%202%20Boss%20%26%20Stage%204%20Boss%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",07 Waterfall of Bloodshed (Stage 3)
-https://vgmsite.com/soundtracks/contra-1988-nes/kgiybargma/07%20Waterfall%20of%20Bloodshed%20%28Stage%203%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",08. Ice Fortress (Stage 5)
-https://vgmsite.com/soundtracks/contra-1988-nes/qhbaehqebs/08.%20Ice%20Fortress%20%28Stage%205%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",09. Flame Fortress (Stage 6)
-https://vgmsite.com/soundtracks/contra-1988-nes/metqgjunjz/09.%20Flame%20Fortress%20%28Stage%206%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",10. Shivery Beat (Stage 8)
-https://vgmsite.com/soundtracks/contra-1988-nes/wgzdemtauh/10.%20Shivery%20Beat%20%28Stage%208%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",11. Triumphal Return 2 (All Stage Clear)
-https://vgmsite.com/soundtracks/contra-1988-nes/skxddsmcqo/11.%20Triumphal%20Return%202%20%28All%20Stage%20Clear%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",12 Sandinista (Ending)
-https://vgmsite.com/soundtracks/contra-1988-nes/phuipxruli/12%20Sandinista%20%28Ending%29.mp3
-#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",13 Game Over
-https://vgmsite.com/soundtracks/contra-1988-nes/lbfgjnknfy/13%20Game%20Over.mp3
+
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",1 - Title Screen
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/1%20-%20Title%20Screen.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",10 - Ending
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/10%20-%20Ending.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",11 - Game Over
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/11%20-%20Game%20Over.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",2 - Jungle  Hangar (Stages 1  7)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/2%20-%20Jungle%20%20Hangar%20%28Stages%201%20%207%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",3 - Bases I  II (Stages 2  4)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/3%20-%20Bases%20I%20%20II%20%28Stages%202%20%204%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",4 - Base Boss
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/4%20-%20Base%20Boss.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",5 - Waterfall (Stage 3)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/5%20-%20Waterfall%20%28Stage%203%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",6 - Snowfield (Stage 5)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/6%20-%20Snowfield%20%28Stage%205%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",7 - Energy Zone (Stage 6)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/7%20-%20Energy%20Zone%20%28Stage%206%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",8 - Alien's Lair (Stage 8)
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/8%20-%20Alien%27s%20Lair%20%28Stage%208%29.mp3
+#EXTINF:-1 tvg-logo="https://images.launchbox-app.com//da5cbf38-30ae-42e0-8ee3-041fa24b6221.jpg" group-title="Music",9 - Victory
+https://archive.org/download/n0st4lg1c_vg/n0st4lg1c_v1d30_g4m3s/Contra/9%20-%20Victory.mp3
