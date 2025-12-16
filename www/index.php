@@ -95,6 +95,54 @@ include 'trafico_web.php';
       box-shadow: 0 0 12px #f92672;
       transition: all 0.3s ease;
     }
+    /**Juegos */
+    /* Modal full black */
+    #emulatorModal .modal-content {
+        background-color: #000;
+        border: none;
+    }
+
+    #emulatorFrame {
+        width: 100%;
+        height: 75vh;
+        border: none;
+    }
+
+    /* Botón flotante para mostrar controles */
+    #btnControls {
+        position: absolute;
+        top: 10px;
+        right: 60px;
+        z-index: 9999;
+    }
+
+    /* Panel de controles */
+    #controlsPanel {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 260px;
+        background: #111;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        z-index: 99999;
+        display: none;
+        box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    }
+
+    #controlsPanel table {
+        color: white;
+    }
+
+    #controlsPanel .close-controls {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        color: #ff6666;
+        font-size: 22px;
+    }
   </style>
 </head>
 <body>
@@ -143,6 +191,52 @@ include 'trafico_web.php';
   </div>
 </div>
 
+<!-- Modal Juegos -->
+<div class="modal fade" id="emulatorModal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title">🎮 Emulador</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body position-relative">
+
+        <!-- Botón de controles -->
+        <button id="btnControls" class="btn btn-warning btn-sm">🎮 Controles</button>
+
+        <!-- Panel de controles oculto -->
+        <div id="controlsPanel">
+            <span class="close-controls">✖</span>
+            <h5 class="mb-3">Controles</h5>
+
+            <table class="table table-sm table-dark table-bordered text-center">
+                <tr><th>Acción</th><th>Tecla</th></tr>
+                <tr><td>Movimiento</td><td>Flechas</td></tr>
+                <tr><td>A</td><td>H</td></tr>
+                <tr><td>B</td><td>G</td></tr>
+                <tr><td>Y</td><td>T</td></tr>
+                <tr><td>X</td><td>Y</td></tr>
+                <tr><td>L</td><td>E</td></tr>
+                <tr><td>R</td><td>P</td></tr>
+                <tr><td>Start</td><td>Enter</td></tr>
+                <tr><td>Select</td><td>ESPACIO</td></tr>
+                <tr><td>Menú</td><td>F1</td></tr>
+                <tr><td>Guardar</td><td>F2</td></tr>
+                <tr><td>Cargar</td><td>F3</td></tr>
+                <tr><td>Foto</td><td>F4</td></tr>
+            </table>
+        </div>
+
+        <!-- Iframe del emulador -->
+        <iframe id="emulatorFrame"></iframe>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 <!-- Librerías JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -168,8 +262,8 @@ function loadConsolas() {
   });
 }
 
-// Carga los juegos desde el servidor según la consola seleccionada
-function loadGames(consola) {
+// Carga los juegos desde el servidor según la consola seleccionada 
+function loadGames(consola) { 
   $.getJSON('get_games.php?consola=' + consola, function(games) {
     const container = $('#cardsContainer').empty(); // limpia el contenedor
 
@@ -177,18 +271,21 @@ function loadGames(consola) {
       // Construye los botones condicionalmente
       let manualBtn = '';
       let gameplayBtn = '';
+      let playBtn = '';
+      let soundtrackBtn = ''; // <<< NUEVO BOTÓN CONDICIONAL
 
       if (game.manual) {
         manualBtn = `
           <a href="${game.manual}" class="btn btn-outline-info btn-sm btn-custom" target="_blank">
-            <i class="fas fa-${consola === 'musica' || consola === 'covers tributo' ? 'info-circle' : 'book'}"></i> ${consola === 'musica' || consola === 'covers tributo' ? 'Información' : 'Manual'}
+            <i class="fas fa-${consola === 'musica' || consola === 'covers tributo' ? 'info-circle' : 'book'}"></i> 
+            ${consola === 'musica' || consola === 'covers tributo' ? 'Información' : 'Manual'}
           </a>`;
       }
-      
+
       if (game.gameplay && consola !== 'musica' && consola !== 'covers tributo') {
         gameplayBtn = `
           <button class="btn btn-outline-danger btn-sm btn-custom" onclick="openModal(gameData[${game.id}])">
-            <i class="fas fa-gamepad"></i> Gameplay
+            <i class="fab fa-youtube"></i> Gameplay
           </button>`;      
       } else if ((consola === 'musica' || consola === 'covers tributo') && game.gameplay) {
         gameplayBtn = `
@@ -196,6 +293,50 @@ function loadGames(consola) {
             <i class="fab fa-youtube"></i> Video
           </a>`;
       }
+
+      // ======================================================
+      // BOTÓN JUGAR SEGÚN game.consola
+      // ======================================================
+      if (game.fileName && game.fileName.trim() !== '') {
+
+        let core = null;
+
+        switch (game.consola) {
+          case 'snes':
+            core = 'snes9x';
+            break;
+          case 'nes':
+            core = 'nestopia';
+            break;
+          case 'n64':
+            core = 'mupen64plus_next';
+            break;
+          case 'playstation 1':
+            core = 'mednafen_psx_hw';
+            break;  
+        }
+
+        if (core) {
+          playBtn = `
+            <button class="btn btn-outline-warning btn-sm btn-custom"
+                    onclick="openEmulator('${core}', '${game.fileName}')">
+              <i class="fas fa-gamepad"></i> Jugar
+            </button>`;
+        }
+      }
+      // ======================================================
+
+      // ======================================================
+      // NUEVA LÓGICA PARA OCULTAR SOUNDTRACK SI NO EXISTE
+      // ======================================================
+      if (game.soundtrack && game.soundtrack.trim() !== '') {
+        soundtrackBtn = `
+          <button class="btn btn-outline-success btn-sm btn-custom" 
+                  onclick="loadSoundtrack('${game.id}', '${game.logo}')">
+            <i class="fas fa-music"></i> Soundtrack
+          </button>`;
+      }
+      // ======================================================
 
       const card = $(`
         <div class="col-md-4">
@@ -210,19 +351,20 @@ function loadGames(consola) {
             <div class="card-body">
               <h5 class="card-title text-light">${game.title}</h5>
               <div class="d-flex flex-wrap gap-1">
+
                 ${manualBtn}
                 ${gameplayBtn}
-                <button class="btn btn-outline-success btn-sm btn-custom" onclick="loadSoundtrack('${game.soundtrack}', '${game.logo}')">
-                  <i class="fas fa-music"></i> Soundtrack
-                </button>
+                ${playBtn}
+                ${soundtrackBtn}
+
               </div>
             </div>
           </div>
         </div>
       `);
 
-      container.append(card); // añade la tarjeta al contenedor
-      gameData[game.id] = game; // guarda los datos localmente por ID
+      container.append(card);
+      gameData[game.id] = game;
     });
   });
 }
@@ -252,12 +394,15 @@ let progressInterval = null;
 let isRepeat = false;
 let isShuffle = false;
 
+<?/*version previa | parse_m3u, parse_m3u_proxy
 function loadSoundtrack(m3uUrl, logoUrl) {
+*/?>
+function loadSoundtrack(gameId, logoUrl) {
   currentModalType = 'soundtrack';
   const $modal = new bootstrap.Modal(document.getElementById('gameModal'));
 
   // Si no hay URL de soundtrack
-  if (!m3uUrl || m3uUrl.trim() === '') {
+  if (!gameId || gameId.trim() === '') {
     $('#modalTitle').text('Soundtrack no disponible');
     $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
     $('#modalContent').html(`
@@ -269,10 +414,11 @@ function loadSoundtrack(m3uUrl, logoUrl) {
     return;
   }
 
-  // Intenta obtener el contenido del M3U
-  fetch('parse_m3u.php?url=' + encodeURIComponent(m3uUrl))
+  // 🔥 Cargar M3U desde PHP
+  fetch('parse_m3u_proxy_v2.php?game_id=' + encodeURIComponent(gameId))
     .then(res => res.json())
     .then(tracks => {
+
       if (!Array.isArray(tracks) || tracks.length === 0) {
         $('#modalTitle').text('Soundtrack vacío');
         $('#modalLogo').html(logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : '');
@@ -285,14 +431,16 @@ function loadSoundtrack(m3uUrl, logoUrl) {
         return;
       }
 
-      // Hay pistas, construir reproductor y lista
+      // Guardar playlist final
       playlist = tracks;
       currentTrackIndex = 0;
 
+      // HTML del reproductor
       let html = `
         <div class="text-center mb-3">
           ${logoUrl ? `<img src="${logoUrl}" style="max-height: 100px;">` : ''}
           <div id="nowPlaying" class="mt-2 fw-bold text-white"></div>
+
           <div class="mt-3">
             <button class="btn btn-primary me-2" onclick="playPreviousTrack()"><i class="fas fa-backward"></i></button>
             <button class="btn btn-success me-2" onclick="playCurrentTrack()"><i class="fas fa-play"></i></button>
@@ -316,20 +464,21 @@ function loadSoundtrack(m3uUrl, logoUrl) {
             </div>
           </div>
         </div>
+
         <ul class="list-group" id="playlistList">`;
 
       tracks.forEach((track, index) => {
-        const safeTitle = track.title?.trim() || `Track ${index + 1}`;
+        let title = track.title?.trim() || `Track ${index + 1}`;
         html += `
           <li class="list-group-item bg-dark text-light" onclick="playTrackAt(${index})" style="cursor:pointer;">
-            ${safeTitle}
+            ${title}
           </li>`;
       });
 
       html += '</ul>';
 
       $('#modalTitle').text('Soundtrack');
-      $('#modalLogo').html(''); // Opcional: podrías dejarlo si deseas mostrar el logo arriba
+      $('#modalLogo').html('');
       $('#modalContent').html(html);
       $modal.show();
 
@@ -345,7 +494,7 @@ function loadSoundtrack(m3uUrl, logoUrl) {
           Ocurrió un error al intentar cargar el soundtrack.
         </div>`);
       $modal.show();
-      console.error('Error al cargar el soundtrack:', error);
+      console.error('Error al cargar soundtrack:', error);
     });
 }
 
@@ -565,6 +714,35 @@ function maximizeModal() {
     console.log('Restaurando gameplay');
   }
 }
+
+function openEmulator(core, romUrl) {
+
+    let finalUrl = "https://a.elr3y.com/juegos/emu/?core=" + core +
+                   "&rom=" + encodeURIComponent(romUrl);
+
+    let frame = document.getElementById("emulatorFrame");
+
+    // Reiniciar el iframe antes de cargar el ROM
+    frame.src = "about:blank";
+
+    setTimeout(() => { frame.src = finalUrl; }, 150);
+
+    let modal = new bootstrap.Modal(document.getElementById('emulatorModal'));
+    modal.show();
+}
+
+// Mostrar / ocultar controles
+document.getElementById("btnControls").onclick = () => {
+    document.getElementById("controlsPanel").style.display = "block";
+};
+
+document.querySelector("#controlsPanel .close-controls").onclick = () => {
+    document.getElementById("controlsPanel").style.display = "none";
+};
+document.getElementById("emulatorModal")
+.addEventListener("hidden.bs.modal", () => {
+    document.getElementById("emulatorFrame").src = "about:blank";
+});
 
 </script>
 <div id="minimizedPlayer" class="fixed-bottom bg-dark text-white p-2 d-none shadow-lg" style="z-index: 1055;">
