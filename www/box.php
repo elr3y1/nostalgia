@@ -1,45 +1,133 @@
 <?php
-// box.php
+// box.php (Safari/iOS + Mobile friendly)
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// CORS HEADERS (NECESARIOS)
+// Evitar compresión/buffering que rompe streaming en Safari/iOS
+@ini_set('zlib.output_compression', '0');
+@ini_set('output_buffering', '0');
+@ini_set('implicit_flush', '1');
+while (ob_get_level() > 0) { @ob_end_clean(); }
+@ob_implicit_flush(true);
+
+// CORS HEADERS
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Range");
-header("Access-Control-Expose-Headers: Accept-Ranges, Content-Range, Content-Length");
+header("Access-Control-Expose-Headers: Accept-Ranges, Content-Range, Content-Length, Content-Type");
 header("Accept-Ranges: bytes");
 
-// MISMAS KEYS QUE EN parse_m3u_proxy.php
-const AES_KEY = 'nosgic_esNostalgiaPuraDeMomentos'; //32 chars exactos
-const AES_IV  = 'NosgicPORLoRetro'; // 16 chars exactos para AES-256-CBC
+// AES
+const AES_KEY = 'nosgic_esNostalgiaPuraDeMomentos'; // 32 chars
+const AES_IV  = 'NosgicPORLoRetro';                 // 16 chars
 
 function decryptToken(string $token) {
-    // base64-url → normal
     $b64 = strtr($token, '-_', '+/');
-    $b64 = str_pad(
-        $b64,
-        strlen($b64) % 4 ? strlen($b64) + 4 - strlen($b64) % 4 : strlen($b64),
-        '=',
-        STR_PAD_RIGHT
-    );
+    $b64 = str_pad($b64, strlen($b64) % 4 ? strlen($b64) + 4 - strlen($b64) % 4 : strlen($b64), '=', STR_PAD_RIGHT);
 
-    $cipher = base64_decode($b64);
+    $cipher = base64_decode($b64, true);
     if ($cipher === false) return null;
 
-    $json = openssl_decrypt(
-        $cipher,
-        'AES-256-CBC',
-        AES_KEY,
-        OPENSSL_RAW_DATA,
-        AES_IV
-    );
-
+    $json = openssl_decrypt($cipher, 'AES-256-CBC', AES_KEY, OPENSSL_RAW_DATA, AES_IV);
     if ($json === false) return null;
 
     return json_decode($json, true);
 }
 
-// ===== VALIDACIÓN =====
+// Normaliza espacios SOLO en el path (sin romper %20 existentes)
+function normalizeUrlPathSpaces(string $url): string {
+    $parts = parse_url($url);
+    if (empty($parts['scheme']) || empty($parts['host']) || !isset($parts['path'])) return $url;
+
+    $path = $parts['path'];
+    if (strpos($path, ' ') !== false) {
+        $path = str_replace(' ', '%20', $path);
+    }
+
+    $fixed = $parts['scheme'] . '://' . $parts['host'];
+    if (!empty($parts['port'])) $fixed .= ':' . $parts['port'];
+    $fixed .= $path;
+    if (!empty($parts['query'])) $fixed .= '?' . $parts['query'];
+    return $fixed;
+}
+
+// Pide un rango mínimo 0-0 para obtener Content-Range y deducir total bytes
+function probeTotalBytesAndType(string $url): array {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_USERAGENT      => 'Mozilla/5.0',
+        CURLOPT_HTTPHEADER     => ['Range: bytes=0-0'],
+        CURLOPT_HEADER         => true,
+        CURLOPT_TIMEOUT        => 25,
+    ]);
+
+    $resp = curl_exec($ch);
+    if ($resp === false) {
+        $err = curl_error($ch);
+        curl_close($ch);
+        return ['ok' => false, 'error' => $err];
+    }
+
+    $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $headersRaw = substr($resp, 0, $headerSize);
+    curl_close($ch);
+
+    $headers = [];
+    foreach (preg_split("/\r\n|\n|\r/", trim($headersRaw)) as $line) {
+        $p = strpos($line, ':');
+        if ($p !== false) {
+            $k = strtolower(trim(substr($line, 0, $p)));
+            $v = trim(substr($line, $p + 1));
+            $headers[$k] = $v;
+        }
+    }
+
+    $total = null;
+    if (!empty($headers['content-range'])) {
+        // Ej: bytes 0-0/1234567
+        if (preg_match('/\/(\d+)\s*$/', $headers['content-range'], $m)) {
+            $total = (int)$m[1];
+        }
+    }
+
+    $ctype = $headers['content-type'] ?? 'audio/mpeg';
+
+    return ['ok' => true, 'total' => $total, 'type' => $ctype];
+}
+
+// Parse Range header (soporta bytes=start-end, bytes=start-, bytes=-suffix)
+function parseRange(?string $rangeHeader, ?int $total): ?array {
+    if (!$rangeHeader) return null;
+    if (!preg_match('/bytes\s*=\s*(\d*)-(\d*)/i', $rangeHeader, $m)) return null;
+
+    $start = $m[1] !== '' ? (int)$m[1] : null;
+    $end   = $m[2] !== '' ? (int)$m[2] : null;
+
+    if ($total !== null) {
+        if ($start === null && $end !== null) {
+            // suffix: last $end bytes
+            $len = min($end, $total);
+            $start = $total - $len;
+            $end = $total - 1;
+        } elseif ($start !== null && $end === null) {
+            $end = $total - 1;
+        } elseif ($start !== null && $end !== null) {
+            if ($end >= $total) $end = $total - 1;
+        }
+
+        if ($start === null || $end === null || $start > $end || $start < 0) return null;
+        return ['start' => $start, 'end' => $end];
+    }
+
+    // sin total, solo aceptamos start-end explícito
+    if ($start !== null && $end !== null && $start <= $end) {
+        return ['start' => $start, 'end' => $end];
+    }
+    return null;
+}
+
+/* ===== VALIDACIÓN ===== */
 if (empty($_GET['id'])) {
     http_response_code(400);
     echo "Missing id";
@@ -53,60 +141,53 @@ if (!$data || empty($data['u'])) {
     exit;
 }
 
-$mp3Url = $data['u'];
+$mp3Url = normalizeUrlPathSpaces($data['u']);
 
-// === ARREGLO CLAVE: normalizar espacios en el PATH ===
-// sin romper los %20 que ya existan
-$fixedUrl = $mp3Url;
-$parts = parse_url($mp3Url);
-
-if (!empty($parts['scheme']) && !empty($parts['host']) && !empty($parts['path'])) {
-    // solo tocamos el path
-    $path = $parts['path'];
-
-    // reemplazar espacios reales por %20
-    if (strpos($path, ' ') !== false) {
-        $path = str_replace(' ', '%20', $path);
-    }
-
-    $fixedUrl = $parts['scheme'] . '://' . $parts['host'];
-
-    if (!empty($parts['port'])) {
-        $fixedUrl .= ':' . $parts['port'];
-    }
-
-    $fixedUrl .= $path;
-
-    if (!empty($parts['query'])) {
-        $fixedUrl .= '?' . $parts['query'];
-    }
+// 1) Probar total bytes y content-type (muy importante para Safari/iOS)
+$probe = probeTotalBytesAndType($mp3Url);
+if (!$probe['ok']) {
+    http_response_code(502);
+    echo "Error probing mp3: " . ($probe['error'] ?? 'unknown');
+    exit;
 }
 
-// ===== STREAM REAL DEL MP3 =====
-$ch = curl_init($fixedUrl);
+$totalBytes = $probe['total']; // puede venir null en casos raros
+$contentType = $probe['type'] ?: 'audio/mpeg';
+
+// 2) Determinar si hay Range del cliente
+$clientRange = $_SERVER['HTTP_RANGE'] ?? null;
+$range = parseRange($clientRange, $totalBytes);
+
+// 3) Preparar cURL con Range (si aplica)
+$ch = curl_init($mp3Url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0');
+curl_setopt($ch, CURLOPT_TIMEOUT, 0); // streaming
 
-// Soporte para SEEK
-if (!empty($_SERVER['HTTP_RANGE'])) {
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['Range: ' . $_SERVER['HTTP_RANGE']]);
+if ($range) {
+    $rangeHeader = "Range: bytes={$range['start']}-{$range['end']}";
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [$rangeHeader]);
+
+    // Respuesta estricta 206 para Safari/iOS
+    http_response_code(206);
+    header("Content-Type: " . $contentType);
+    header("Accept-Ranges: bytes");
+    if ($totalBytes !== null) {
+        header("Content-Range: bytes {$range['start']}-{$range['end']}/{$totalBytes}");
+        header("Content-Length: " . (($range['end'] - $range['start']) + 1));
+    }
+} else {
+    // Sin Range: entregar completo con Content-Length si se conoce
+    http_response_code(200);
+    header("Content-Type: " . $contentType);
+    header("Accept-Ranges: bytes");
+    if ($totalBytes !== null) {
+        header("Content-Length: " . $totalBytes);
+    }
 }
 
-// Pasar headers importantes
-curl_setopt($ch, CURLOPT_HEADERFUNCTION, function($ch, $header) {
-    $lower = strtolower(trim($header));
-    if (strpos($lower, 'content-type:') === 0 ||
-        strpos($lower, 'content-length:') === 0 ||
-        strpos($lower, 'accept-ranges:') === 0 ||
-        strpos($lower, 'content-range:') === 0) {
-        header($header);
-    }
-    return strlen($header);
-});
-
-header('Content-Type: audio/mpeg');
-
+// 4) Stream directo
 curl_exec($ch);
 
 if (curl_errno($ch)) {
@@ -115,3 +196,4 @@ if (curl_errno($ch)) {
 }
 
 curl_close($ch);
+exit;
